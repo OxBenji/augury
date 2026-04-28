@@ -1,0 +1,17 @@
+node_modules/
+/landing/node_modules/
+/landing/.next/
+dist/
+build/
+tmp/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+pglite-data/
+.elizaos/
+speculum-report-*.json
+speculum-phase1-*.json
+speculum-tuned*.txt
+/data/smart-wallets.json

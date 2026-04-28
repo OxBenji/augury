@@ -1,0 +1,28 @@
+{
+  "name": "augury",
+  "version": "0.1.0",
+  "description": "A swarm of specialist agents reading onchain markets in adversarial consensus.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "elizaos start",
+    "start": "elizaos start",
+    "lint": "eslint . --ext .ts",
+    "speculum:replay": "bun run src/cli/speculum.ts"
+  },
+  "dependencies": {
+    "@elizaos/core": "1.7.2-beta.0",
+    "@elizaos/plugin-anthropic": "^1.5.12",
+    "@electric-sql/pglite": "^0.2.0",
+    "pg": "^8.13.0",
+    "dotenv": "^16.4.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "typescript": "^5.7.0",
+    "eslint": "^9.0.0"
+  }
+}
