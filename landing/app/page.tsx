@@ -6,54 +6,63 @@ import { MirrorSection } from "@/components/MirrorSection";
 const agents = [
   {
     name: "Lituus",
+    spanishName: "Lituo",
     role: "Sky-quadrant filter",
     model: "Deterministic",
     description: "Deterministic gate. No oracle needed to draw the quadrant.",
   },
   {
     name: "Haruspex",
+    spanishName: "Har\u00FAspice",
     role: "Reader of internals",
     model: "Haiku",
     description: "Examines holder patterns, wallet lineage, and deployer history.",
   },
   {
     name: "Auspex",
+    spanishName: "\u00C1uspice",
     role: "Watcher of voices",
     model: "Haiku",
     description: "Listens to the social canopy. Separates signal from coordinated noise.",
   },
   {
     name: "Chronos",
+    spanishName: "Cronos",
     role: "Keeper of flow",
     model: "Haiku",
     description: "Watches volume, depth, and the rhythm of liquidity.",
   },
   {
     name: "Fas",
+    spanishName: "Fas",
     role: "The divine yes",
     model: "Sonnet",
     description: "Argues the strongest case to fire. Must name what it cannot explain.",
   },
   {
     name: "Nefas",
+    spanishName: "Nefas",
     role: "The divine no",
     model: "Sonnet",
     description: "Argues the strongest case to pass. Must name what it cannot dismiss.",
   },
   {
     name: "Sibyl",
+    spanishName: "Sibila",
     role: "Keeper of the record",
     model: "Haiku",
     description: "Scores every reading against what actually happened. Recalibrates weekly.",
   },
   {
     name: "Speculum",
+    spanishName: "Esp\u00E9culo",
     role: "The backward mirror",
     model: "Haiku",
     description: "Backtests the flock against history. The mirror that does not flatter.",
   },
   {
     name: "Vates",
+    spanishName: "Vates",
     role: "The lightning-reader",
     model: "Deterministic",
     description: "Reads on-chain signals the archive does not see. LP burn, honeypot status, smart wallets, dev silence.",
@@ -75,7 +84,10 @@ export default function Home() {
           <p className="mt-4 text-ash text-lg sm:text-xl font-geist tracking-wide uppercase">
             Read the swarm.
           </p>
-          <p className="mt-2 text-bone/60 text-sm sm:text-base font-geist max-w-md mx-auto">
+          <p className="mt-2 font-cinzel text-patina text-xs sm:text-sm tracking-[0.25em] uppercase">
+            lee la bandada
+          </p>
+          <p className="mt-3 text-bone/60 text-sm sm:text-base font-geist max-w-md mx-auto">
             A flock of agents reading onchain markets in adversarial consensus.
           </p>
           <a
@@ -100,6 +112,12 @@ export default function Home() {
         </p>
         <p className="text-bone/60 text-base mt-4 font-geist">
           Built on elizaOS. Open source.
+        </p>
+        <p className="text-[rgba(245,241,232,0.55)] text-sm mt-6 leading-relaxed font-geist italic">
+          Augurio es una bandada de agentes especialistas leyendo los mercados
+          onchain. Nueve agentes. Cada uno con un rol. Juntos forman una
+          lectura — un solo juicio entregado solo cuando el divino s&iacute; (Fas) y
+          el divino no (Nefas) est&aacute;n de acuerdo. Construido en elizaOS.
         </p>
       </section>
 
@@ -186,6 +204,9 @@ export default function Home() {
           >
             Built in public
           </a>
+        </p>
+        <p className="mt-3 text-ash/50 text-xs italic font-geist">
+          un augurio biling&uuml;e — construido en p&uacute;blico
         </p>
       </footer>
     </main>
