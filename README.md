@@ -28,6 +28,8 @@ Augury is in active development. Architecture is wired and the Speculum
 replay engine runs against historical Solana memecoin decisions.
 Real-LLM smoke tests are pending.
 
+Live: https://landing-wine-iota.vercel.app
+
 ## Stack
 
 - TypeScript / Bun
