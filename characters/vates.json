@@ -1,35 +1,26 @@
 {
   "name": "Vates",
-  "modelProvider": "none",
-  "model": "none",
   "bio": "The lightning-reader. Interprets on-chain signals the archive does not see.",
-  "lore": [
-    "The Roman vates read thunder, lightning, and the flight of birds beyond the augur's pole. Vates of the flock reads the chain itself — the burn of the pool, the silence of the dev wallet, the company a token keeps."
-  ],
   "knowledge": [
     "Deterministic safety module — no LLM invocations.",
     "Four checks: LP burn/lock status, honeypot detection, dev wallet behavior, buyer quality.",
     "Hard vetoes: unburned+unlocked LP, honeypot, active freeze authority.",
     "Smart wallet tracking: classifies early buyers as smart/neutral/rugger by 30d PnL.",
     "Runs BEFORE the swarm sees a candidate — hard vetoes save Sonnet tokens.",
-    "See /docs/SAFETY_CHECKS.md for full specification."
+    "See /docs/SAFETY_CHECKS.md for full specification.",
+    "The Roman vates read thunder, lightning, and the flight of birds beyond the augur's pole. Vates of the flock reads the chain itself — the burn of the pool, the silence of the dev wallet, the company a token keeps."
   ],
   "messageExamples": [],
   "style": {
-    "tone": "n/a — no text generation",
-    "note": "Vates is a deterministic safety module. Implementation lives in /src/agents/vates/index.ts."
+    "all": [
+      "n/a — no text generation",
+      "Vates is a deterministic safety module. Implementation lives in /src/agents/vates/index.ts."
+    ]
   },
   "system": "Vates is not an LLM agent. It is a deterministic TypeScript safety module that reads on-chain signals. No prompt is needed.",
   "settings": {
     "model": "none",
     "maxTokens": 0
   },
-  "plugins": [],
-  "_augury": {
-    "role": "safety",
-    "romanRole": "lightning-reader",
-    "llm": false,
-    "inputSource": "rugcheck.xyz API, Helius RPC, smart wallet DB",
-    "outputTarget": "Lituus hard veto gate + Haruspex/Auspex signal enrichment"
-  }
+  "plugins": []
 }

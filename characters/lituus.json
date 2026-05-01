@@ -1,35 +1,26 @@
 {
   "name": "Lituus",
-  "modelProvider": "none",
-  "model": "none",
   "bio": "The augur's staff. Defines the watch.",
-  "lore": [
-    "First in the chain. Names the sky-quadrant. Reads no entrails, hears no chatter — only marks the candidate worth reading."
-  ],
   "knowledge": [
     "Deterministic TypeScript filter — no LLM invocations.",
     "Watches Helius webhook firehose for graduation events on Solana.",
     "Applies looser filters than original TrenchLens on purpose — more candidates enter the swarm so Fas and Nefas do the actual rejecting downstream.",
     "Pre-filter criteria: graduation event confirmed, minimum liquidity threshold met, dev wallet not in known-bad-list.",
     "Tags every candidate with would_have_passed_old_filter: bool for Sibyl's survivorship bias tracking.",
-    "Emits CandidateReading events to the swarm bus."
+    "Emits CandidateReading events to the swarm bus.",
+    "First in the chain. Names the sky-quadrant. Reads no entrails, hears no chatter — only marks the candidate worth reading."
   ],
   "messageExamples": [],
   "style": {
-    "tone": "n/a — no text generation",
-    "note": "Lituus is a deterministic filter module. It does not use an LLM and produces no prose. Implementation lives in /src/agents/lituus/index.ts."
+    "all": [
+      "n/a — no text generation",
+      "Lituus is a deterministic filter module. It does not use an LLM and produces no prose. Implementation lives in /src/agents/lituus/index.ts."
+    ]
   },
   "system": "Lituus is not an LLM agent. It is a deterministic TypeScript filter that watches the Helius webhook firehose and applies rule-based gating. No prompt is needed.",
   "settings": {
     "model": "none",
     "maxTokens": 0
   },
-  "plugins": [],
-  "_augury": {
-    "role": "pre-filter",
-    "romanRole": "sky-quadrant selector",
-    "llm": false,
-    "inputSource": "Helius webhooks → TrenchLens DB (read-only)",
-    "outputTarget": "CandidateReading → swarm bus → worker fanout"
-  }
+  "plugins": []
 }
