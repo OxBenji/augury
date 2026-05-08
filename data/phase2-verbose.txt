@@ -8,502 +8,503 @@ Selected 20 stratified candidates
   Breakdown: hit=4, good=4, loss=4, rug=4, neutral=4
 
 ───────────────────────────────────────────────
-[1/20] ELUN · outcome=hit
+[1/20] XSLOP · outcome=hit
 ───────────────────────────────────────────────
-  mcap:       $89,414
-  liquidity:  $23,530.17
-  buys 5m:    355  |  sells 5m: 217
-  vol 5m:     $23,000.03  |  vol 1h: $488,937.62
-  chg 5m:     -18.03%  |  chg 1h: 177%
-  age:        40 min
-  social:     socials, twitter, website
-  score:      45.72
-  red flags:  Price dropping -18.0% on volume | Vol/Liq ratio too high — wash trading?
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | MCap sweet spot: $89,414 (best hit rate band) | Strong buy flow: 355(5m) 7107(1h) | Healthy heat: 56% — active buying momentum | Good liq depth: 26% | Fresh: 40m old | Has socials | Friday — strongest day (44%% hit, 16%% rug) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i
+  mcap:       $23,735.03
+  liquidity:  $0 (pre-grad)
+  buys 5m:    131  |  sells 5m: 63
+  vol 5m:     $8,323.05  |  vol 1h: $71,114.84
+  chg 5m:     52.8%  |  chg 1h: 796%
+  age:        43 min
+  social:     socials, twitter
+  score:      32
+  red flags:  Already +796% in 1h — high entry risk | BUNDLE: 68% of early buys are bundled — fake demand from 0 wallets
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 131(5m) 968(1h) | Fresh: 43m old | Has socials | Strong time window (07 UTC) — 40%+ hit rate | Has X/Twitter: https://x.com/ianmiles
 
-  Haruspex: 0.40 — "The token has a trenchlensScore of 45.72, indicating moderate potential; however, the presence of redFlags related to price decline and suspicious volume/liquidity ratio raises concerns about possible wash trading. Despite several positive markers, the redFlags lead to a more cautious evaluation."
-  Auspex:   0.40 — "While ELUN has multiple socialChannels, the presence of significant redFlags such as price drops and potential wash trading raise concerns about the authenticity of interest. Additionally, despite a strong buy flow, the high price decline indicates market instability, suggesting a lack of organic engagement."
-  Chronos:  0.60 — "Despite a substantial price change of 177% in the last hour and more buys than sells, the significant recent negative change of -18.03% in the last 5 minutes suggests potential volatility. The high volume 1h signals interest, but the adverse price movement creates caution."
+  Haruspex: 0.10 — "The presence of explicit redFlags, particularly BUNDLE indicating potential artificial demand, significantly diminishes the viability of this token. Despite some greenFlags, the overall risk is too high with a trenchlensScore of only 32."
+  Auspex:   0.20 — "This token exhibits redFlags, including a warning about high entry risk due to extreme price movement and fake demand signals. Despite having active socialChannels, the redFlags heavily outweigh the positives, indicating a lack of genuine organic engagement."
+  Chronos:  0.90 — "With a priceChange1h of 796% combined with buys5m significantly exceeding sells5m (131 vs 63), the token is showing strong momentum and demand, supported by rising volume (71114.84)."
 
-  Fas:      skip — "All three workers exhibit concerns regarding significant red flags, particularly in price decline and potential wash trading, leading to a lack of confidence in the token's stability and authenticity. Additionally, no worker scored sufficiently high to warrant a fire despite some positive markers."
-  Nefas:    skip — "The presence of critical red flags, particularly regarding price drops and potential wash trading, warrants a cautious approach. With two workers scoring below 0.5 and one worker explicitly vetoing based on these concerns, there is insufficient consensus to proceed with the fire decision."
+  Fas:      skip — "The candidate has multiple red flags present, particularly a BUNDLE flag indicating artificial demand, alongside a high entry risk due to excessive price movement. These factors, combined with low worker scores and a lack of genuine engagement, warrant a hard skip despite some positive momentum."
+  Nefas:    skip — "The presence of a BUNDLE flag indicating artificial demand, along with a significant price increase in a short timeframe, suggests a high entry risk that cannot be overlooked. These factors outweigh the positive indicators and demonstrate that the token's viability is significantly diminished."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  hit  <- missed
-  Cost:     $0.0009
+  Cost:     $0.0008
 
 ───────────────────────────────────────────────
-[2/20] Jelly · outcome=hit
+[2/20] POSITIONS · outcome=hit
 ───────────────────────────────────────────────
-  mcap:       $29,482
-  liquidity:  $13,252.47
-  buys 5m:    11  |  sells 5m: 0
-  vol 5m:     $544.63  |  vol 1h: $12,052.66
-  chg 5m:     18.24%  |  chg 1h: 22.41%
-  age:        276 min
-  social:     socials, twitter, website
-  score:      48.41
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 11(5m) 116(1h) | Healthy heat: 54% — active buying momentum | Good liq depth: 45% | Mature: 276m — lowest rug rate (14%) | Gradual rise — organic | Has socials | Friday — strongest day (44%% hit, 16%% rug) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/agentz010
+  mcap:       $96,190
+  liquidity:  $23,938.32
+  buys 5m:    304  |  sells 5m: 237
+  vol 5m:     $32,214.63  |  vol 1h: $399,878.58
+  chg 5m:     13.68%  |  chg 1h: 192%
+  age:        32 min
+  social:     socials, twitter
+  score:      40.88
+  red flags:  Vol/Liq ratio too high — wash trading? | Weak narrative appeal with generic ticker name | Vol/Liq ratio of 16.7x indicates artificial volume inflation
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | MCap sweet spot: $96,190 (best hit rate band) | Strong buy flow: 304(5m) 5010(1h) | Good liq depth: 25% | Fresh: 32m old | Has socials | Strong time window (10 UTC) — 40%+ hit rate | 🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/CoolBrandonD | Excellent buy/sell ratio of 1.31x shows genuine buyer interest | Strong 192% hourly growth with sustained momentum | Clean bundle metrics suggest organic rather than coordinated launch
 
-  Haruspex: 0.80 — "Although the trenchlensScore is below 70, the presence of multiple greenFlags such as 'Strong buy flow', 'Healthy heat', and 'Graduated to DEX' without any redFlags indicates a positive outlook for this token."
-  Auspex:   0.90 — "Jelly has multiple social channels including socials, twitter, and a website, coupled with strong green flags indicating organic engagement and healthy buying momentum. The absence of red flags further reinforces the sentiment of genuine interest among early adopters, despite being a graduated token."
-  Chronos:  0.90 — "Jelly shows strong momentum with a price change of 22.41% in the last hour, a solid volume of 12052.66, and 11 buys against 0 sells in the last 5 minutes, indicating a healthy pump pattern."
+  Haruspex: 0.30 — "Despite having positive indicators such as a strong buy flow and graduated DEX liquidity, the presence of multiple significant red flags—especially the high volume-to-liquidity ratio suggesting potential wash trading—merits a cautious score."
+  Auspex:   0.20 — "Despite having social channels, the presence of multiple redFlags indicates potential issues with market manipulation and a weak narrative. The disconnect between the high buy volume and the questionable wash trading signals a risk of artificial interest rather than genuine organic engagement."
+  Chronos:  0.90 — "POSITIONS demonstrates strong momentum with a price change of 192% in the last hour, and a buy-sell ratio of 1.28, indicating positive pressure. The volume has risen significantly, with 399,878.58 in the past hour, suggesting robust interest and activity."
 
-  Fas:      fire — "With two workers scoring above 0.8 and providing compelling reasoning based on strong green flags, robust buying momentum, and the absence of any red flags, the positive outlook for Jelly is clear. The overall structure supports a bullish case, indicating that the token is primed for further growth."
-  Nefas:    skip — "Despite the positive evaluations from the workers, the trenchlensScore is below 70, suggesting potential risk factors. Additionally, the market dynamics show reliance on organic momentum but do not definitively eliminate the uncertainty typical in this market segment. Given the baseline hit rate is only 8%, caution is warranted until further confirmation is observed."
+  Fas:      skip — "Despite a strong momentum score from one worker, the presence of significant red flags, particularly regarding the volume-to-liquidity ratio indicating potential wash trading, raises serious concerns about the legitimacy of the trading activity. This indicates that the buy interest may not be organic, which is critical for long-term success."
+  Nefas:    skip — "The significant red flags regarding wash trading and a questionable volume-to-liquidity ratio cast doubt on the authenticity of the trading activity, posing a substantial risk. Despite some positive metrics, the risks outweigh the potential benefits, indicating a market manipulation concern that cannot be overlooked."
 
-  Decision: SKIP  (consensus: split)
+  Decision: SKIP  (consensus: skip)
   Outcome:  hit  <- missed
-  Cost:     $0.0016
+  Cost:     $0.0017
 
 ───────────────────────────────────────────────
-[3/20] Occlupanid · outcome=hit
+[3/20] VC · outcome=hit
 ───────────────────────────────────────────────
-  mcap:       $6,709.97
+  mcap:       $18,007.37
   liquidity:  $0 (pre-grad)
-  buys 5m:    120  |  sells 5m: 108
-  vol 5m:     $7,342.33  |  vol 1h: $109,588.63
-  chg 5m:     -45.35%  |  chg 1h: 165%
+  buys 5m:    61  |  sells 5m: 39
+  vol 5m:     $4,358.89  |  vol 1h: $75,789.61
+  chg 5m:     -16.2%  |  chg 1h: 558%
   age:        30 min
-  social:     socials, twitter, website
-  score:      44
-  red flags:  Price dropping -45.4% on volume
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 120(5m) 1866(1h) | Fresh: 30m old | Has socials | Good time window (04-08 UTC) — 32%% hit rate | Tuesday — strong day (29%% hit) | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
+  social:     socials, twitter
+  score:      36
+  red flags:  Price dropping -16.2% on volume | Already +558% in 1h — buying top | Already +558% in 6h — extended | Friday — highest rug rate (60%% rug)
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 61(5m) 953(1h) | Fresh: 30m old | Has socials | Good time window (04-08 UTC) — 32%% hit rate | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.40 — "Despite a strong buy flow and the age of more than 30 minutes, the price drop of -45.4% on significant volume is concerning, and the trenchlensScore is low at 44. The presence of substantial negative price action weighs down the overall assessment."
-  Auspex:   0.60 — "Occlupanid shows a moderate social presence with multiple channels (twitter, website) and positive greenFlags indicating fresh interest and strong buy flow. However, the substantial price drop of -45.4% raises concerns, and the only minor redFlag indicates a potential risk."
-  Chronos:  0.60 — "Despite a significant priceChange1h of 165%, the negative priceChange5m indicates volatility. Buys slightly exceed sells, and with high volumes, there's interest, but the sell pressure compromises the overall momentum."
+  Haruspex: 0.10 — "The presence of multiple significant redFlags, including steep price drops and high risk associated with the day of the week, indicates strong potential for failure. Furthermore, the trenchlensScore of 36 suggests a weak investment signal."
+  Auspex:   0.40 — "While VC has a presence on multiple social channels (socials, twitter) and indicates strong buying flow, the significant red flags including a steep price drop of -16.2% on volume and the historical context of high rug rates create major concerns about the sustainability of interest. The early signs of strong engagement are overshadowed by the negative price movements and risk factors."
+  Chronos:  0.20 — "Despite the positive buying pressure with 61 buys against 39 sells, the negative price change of -16.2% in the last 5 minutes alongside extremely high price surge of +558% in 1 hour indicates a potential buy top scenario, suggesting exhaustion. The high volume does not reflect sustainable interest as indicated by the negative momentum, leading to a low score."
 
-  Fas:      skip — "Although there is some positive sentiment from Auspex and Chronos regarding the buy flow and social presence, the significant price drop of -45.4% on substantial volume presents a critical concern. The split scores among the workers and the potential risks highlighted by Haruspex, signaling market volatility and negative momentum, do not support a decisive 'fire' action."
-  Nefas:    skip — "The presence of a significant price drop of -45.4% on heavy volume indicates instability, which is compounded by the low trenchlensScore of 44. Additionally, the split scores among the workers, with Haruspex providing a low score due to serious concerns about negative price action, support a cautious approach. Even though Auspex and Chronos identify some positives, the overall risk profile does not warrant a 'fire' decision."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  hit  <- missed
-  Cost:     $0.0024
-
-───────────────────────────────────────────────
-[4/20] PEEPEH · outcome=hit
-───────────────────────────────────────────────
-  mcap:       $15,810.86
-  liquidity:  $0 (pre-grad)
-  buys 5m:    45  |  sells 5m: 29
-  vol 5m:     $5,722.24  |  vol 1h: $87,506.94
-  chg 5m:     -27.42%  |  chg 1h: 383%
-  age:        50 min
-  social:     socials, twitter, website
-  score:      37
-  red flags:  Price dropping -27.4% on volume | Already +383% in 1h — buying top
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 45(5m) 1122(1h) | Fresh: 50m old | Has socials | Prime time window (08-12 UTC) — 42.5%% hit rate | Tuesday — strong day (29%% hit) | Has X/Twitter: https://x.com/i
-
-  Haruspex: 0.30 — "While there are some positive markers such as strong buy flow and presence on social media, the significant price drop of -27.4% in the past 5 minutes and the increasingly high price increase of +383% in the past hour raise concerns about unsustainable price action, indicating potential exploitative behavior."
-  Auspex:   0.60 — "PEEPEH has multiple social channels (socials, twitter, website) indicating potential organic interest. However, the presence of red flags such as significant price drops and a spike in buying suggests some volatility and possible speculative behavior."
-  Chronos:  0.60 — "Despite a high volume of 87506.94 in the last hour and more buys (45) than sells (29), the significant negative price change of -27.42% in the last 5 minutes and a peak price change of +383% in the last hour raises concerns about potential overbuying, indicating a possible top exhaustion. Thus, while there is some positive momentum and interest, the bearish indicators point towards caution."
-
-  Fas:      skip — "There are significant concerns with price volatility, evidenced by the -27.4% drop alongside a +383% increase in the past hour, suggesting exploitative behavior and potential top exhaustion. These red flags weaken the case for commitment, despite some positive indicators, leading to a decision to skip."
-  Nefas:    skip — "Despite some positive indicators like strong buy flow and social media presence, the significant price volatility indicated by a -27.4% drop and an unrealistic +383% spike raises major concerns about possible exploitative behavior. Additionally, the mixed scores from the workers and existing red flags further justify leaning towards a decision to skip."
+  Fas:      skip — "The candidate VC has multiple significant red flags, including a large price drop of -16.2% and high risk associated with the timing of the investment. With all three worker scores below 0.4, it poses a universal rejection scenario despite some positive buying pressure."
+  Nefas:    skip — "The candidate VC presents multiple significant red flags, including a steep price drop of -16.2% and a highly concerning day for investment with a 60% rug rate. Additionally, all three workers score below the accepted threshold, indicating a lack of strong consensus for a positive investment outcome."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  hit  <- missed
+  Cost:     $0.0025
+
+───────────────────────────────────────────────
+[4/20] LAIKA · outcome=hit
+───────────────────────────────────────────────
+  mcap:       $92,520
+  liquidity:  $25,584.24
+  buys 5m:    124  |  sells 5m: 75
+  vol 5m:     $12,048.38  |  vol 1h: $149,807.96
+  chg 5m:     2.07%  |  chg 1h: 72.77%
+  age:        113 min
+  social:     socials, twitter, website
+  score:      43.92
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | MCap sweet spot: $92,520 (best hit rate band) | Strong buy flow: 124(5m) 1795(1h) | Good liq depth: 28% | Fresh: 113m old | Gradual rise — organic | Has socials | Friday — strongest day (44%% hit, 16%% rug) | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/laika_dog_sol
+
+  Haruspex: 0.60 — "Despite a trenchlensScore of 43.92, LAIKA benefits from multiple greenFlags such as having a graduated status, good liquidity depth, and strong buy flow, which indicate positive momentum. The lack of redFlags further enhances its profile, making it a token worth monitoring closely."
+  Auspex:   0.90 — "LAIKA has multiple social channels including Twitter and a dedicated website, paired with several positive green flags indicating organic interest and a strong buy flow. The absence of red flags further reinforces its potential as a solid investment."
+  Chronos:  1.00 — "With a price change of 72.77% over the last hour, strong buy flow (124 buys vs. 75 sells in the last 5 minutes), and rising volume (12048.38 in 5m and 149807.96 in 1h), LAIKA is showing robust momentum and pressure direction favoring buyers."
+
+  Fas:      fire — "LAIKA holds a graduated status with zero red flags, supported by strong buy pressure and positive price momentum, making it a compelling investment opportunity. Additionally, the combined worker scores indicate a solid consensus for action."
+  Nefas:    fire — "All conditions for conceding are met: there are no near-veto flags, no worker has a veto, multiple workers scored significantly above 0.6, and recent buys surpass sells without active sell pressure. The data showcases robust buy momentum and strong indicators for potential growth."
+
+  Decision: FIRE  (consensus: fire)
+  Outcome:  hit  <- correct
   Cost:     $0.0033
 
 ───────────────────────────────────────────────
-[5/20] BREAD · outcome=good
+[5/20] PEPEPUNCH · outcome=good
 ───────────────────────────────────────────────
-  mcap:       $28,329
-  liquidity:  $13,287.59
-  buys 5m:    107  |  sells 5m: 86
-  vol 5m:     $7,513.07  |  vol 1h: $113,163
-  chg 5m:     40.49%  |  chg 1h: -22.22%
-  age:        30 min
-  social:     socials, twitter, website
-  score:      43.47
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 107(5m) 1929(1h) | Healthy heat: 80% — active buying momentum | Good liq depth: 47% | Fresh: 30m old | Has socials | Friday — strongest day (44%% hit, 16%% rug) | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/Pontifex
+  mcap:       $66,498
+  liquidity:  $21,067.86
+  buys 5m:    139  |  sells 5m: 125
+  vol 5m:     $30,381.1  |  vol 1h: $248,398.33
+  chg 5m:     29.46%  |  chg 1h: 79.74%
+  age:        38 min
+  social:     socials, twitter
+  score:      42.12
+  red flags:  Vol/Liq ratio too high — wash trading? | Thursday — worst hit rate (6.2%% hit) | Very low market cap at $66k makes it extremely volatile and risky
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 139(5m) 1496(1h) | Good liq depth: 32% | Fresh: 38m old | Recent pump.fun graduate (5-60m) — momentum window | Gradual rise — organic | Has socials | Good time window (04-08 UTC) — 32%% hit rate | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i | 1.27x buy/sell ratio shows genuine buying interest | Graduated during optimal momentum window (5-60m post pump.fun)
 
-  Haruspex: 0.60 — "BREAD has multiple greenFlags indicating strong buy flow, healthy liquidity depth, and active buying momentum, which support its potential. However, the trenchlensScore of 43.47 is below the required threshold for a higher confidence score."
-  Auspex:   0.90 — "BREAD has multiple social channels including Twitter and a website, coupled with strong green flags indicating healthy buying momentum and active engagement. The absence of red flags further supports the positive sentiment and potential organic interest."
-  Chronos:  0.30 — "Despite a strong buy flow with 107 buys against 86 sells in the last 5 minutes, the priceChange1h of -22.22 indicates negative momentum. The volume is substantial but the negative price change suggests potential weakness and declining interest."
+  Haruspex: 0.40 — "Despite a high buy/sell ratio and the benefit of being graduated, the significant red flags regarding volatility due to low market cap and the possibility of wash trading raise concerns. The trenchlensScore of 42.12 also indicates underlying weakness."
+  Auspex:   0.60 — "PEPEPUNCH has multiple social channels and numerous positive greenFlags indicating genuine interest, but the presence of significant redFlags, including potential wash trading and volatility due to low market cap, dampens the overall sentiment. The scoring reflects a mix of organic engagement and coordinated activity."
+  Chronos:  0.90 — "The priceChange1h is significantly positive at 79.74%, with buys (139) exceeding sells (125), supported by a strong volume of 248398.33 in the last hour indicating rising interest and momentum."
 
-  Fas:      skip — "The workers are split, with one worker scoring high (0.9) and another significantly lower (0.3), indicating a lack of consensus on BREAD's potential. Furthermore, the negative price change over the past hour raises concerns about its momentum, suggesting that there may be underlying issues affecting performance."
-  Nefas:    skip — "BREAD exhibits a lack of consensus among the workers, with a split in scores leading to uncertainty about its potential. Additionally, there is a significant negative price change in the last hour, indicating potential weakness in demand despite some positive indicators. Given the baseline failure rate and current conditions, it makes sense to avoid firing on this candidate."
+  Fas:      fire — "PEPEPUNCH has graduated with zero near-veto flags and multiple positive indicators such as strong buy flow and high price momentum, leading to a highly favorable firing signal despite some concerns."
+  Nefas:    skip — "Despite the positive indicators, significant red flags regarding wash trading and the very low market cap increase the risk of volatility, which cannot be overlooked. The worker scores are split, with one worker offering a low score, indicating uncertainty in the data."
+
+  Decision: SKIP  (consensus: split)
+  Outcome:  good  <- missed
+  Cost:     $0.0042
+
+───────────────────────────────────────────────
+[6/20] 10% · outcome=good
+───────────────────────────────────────────────
+  mcap:       $15,700.42
+  liquidity:  $0 (pre-grad)
+  buys 5m:    15  |  sells 5m: 13
+  vol 5m:     $1,496.26  |  vol 1h: $17,995.96
+  chg 5m:     8.8%  |  chg 1h: 229%
+  age:        131 min
+  social:     socials, twitter
+  score:      43
+  red flags:  Weak B/S ratio: 1.2x
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 15(5m) 162(1h) | Mature: 131m — lowest rug rate (14%) | Has socials | Strong time window (10 UTC) — 40%+ hit rate | 🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest) | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
+
+  Haruspex: 0.60 — "Despite a low trenchlensScore of 43, the positive market dynamics indicated by multiple greenFlags such as strong buy flow and favorable timing patterns suggest potential. However, the presence of a redFlag related to the weak buy/sell ratio indicates caution."
+  Auspex:   0.90 — "The token has multiple social channels (socials, twitter) and several positive greenFlags indicating strong interest and engagement (e.g., 'Strong buy flow' and 'Has socials'). The weak buy/sell ratio is mitigated by the strong age and low rug rate, indicating organic interest."
+  Chronos:  0.90 — "The positive priceChange1h of 229% coupled with more buys (15) than sells (13) and rising volume (from 1496.26 in 5m to 17995.96 in 1h) indicates strong momentum and positive pressure direction."
+
+  Fas:      fire — "The candidate demonstrates strong positive momentum with two workers scoring above 0.6 and no near-veto flags present, alongside a favorable buy/sell ratio and significant price change. The absence of red flags and strong buy flow suggest a healthy trajectory for the token."
+  Nefas:    skip — "While there are some positive indicators, the weak buy/sell ratio is a significant concern that introduces risk. Additionally, the low trenchlensScore suggests a lack of strong underlying support for the candidate, warranting caution in this decision."
+
+  Decision: SKIP  (consensus: split)
+  Outcome:  good  <- missed
+  Cost:     $0.0050
+
+───────────────────────────────────────────────
+[7/20] OpenClaw · outcome=good
+───────────────────────────────────────────────
+  mcap:       $63,524
+  liquidity:  $97,937.16
+  buys 5m:    219  |  sells 5m: 156
+  vol 5m:     $146,769.53  |  vol 1h: $1,321,128.66
+  chg 5m:     5.77%  |  chg 1h: 16.74%
+  age:        118 min
+  social:     socials, twitter
+  score:      48.22
+  red flags:  Vol/Liq ratio too high — wash trading? | BUNDLE: 3 buys in first slot — likely coordinated launch
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 219(5m) 2645(1h) | Good liq depth: 154% | Fresh: 118m old | Gradual rise — organic | Has socials | Monday — best day (31%% hit, 35%% rug) | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/OpenClawAi_SOL
+
+  Haruspex: 0.30 — "Despite having several positive indicators such as being graduated and good liquidity depth, the presence of significant red flags, particularly related to high volume/liquidity ratio and bundled transactions indicating possible coordinated launch, suggests caution."
+  Auspex:   0.30 — "Despite having multiple socialChannels, the presence of redFlags such as potential wash trading and a coordinated launch raises concerns about the authenticity of the generated interest. The high volume relative to liquidity also suggests possible manipulation, indicating that the buy/sell activity may not be entirely organic."
+  Chronos:  0.90 — "With a market cap of $63,524, OpenClaw shows strong momentum with a price change of 16.74% over the past hour, along with more buys (219) than sells (156), and significant rising volume of 1,321,128.66 in the last hour indicating solid interest and activity."
+
+  Fas:      skip — "The presence of significant red flags, specifically the BUNDLE and high volume/liquidity ratio, indicates serious concerns about the authenticity of the buy/sell activity and possible manipulation. Despite one worker showing strong momentum, the overall situation is compromised by these near-veto flags, making it a hard skip."
+  Nefas:    skip — "The presence of the BUNDLE flag and the high volume/liquidity ratio indicates serious risks and potential manipulation, overriding the positive signals from the strong momentum worker. Given these concerning red flags, a skip is warranted."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  good  <- missed
-  Cost:     $0.0040
+  Cost:     $0.0058
 
 ───────────────────────────────────────────────
-[6/20] PIGEON · outcome=good
+[8/20] 7Dogs · outcome=good
 ───────────────────────────────────────────────
-  mcap:       $9,274.09
+  mcap:       $16,150
+  liquidity:  $10,174.27
+  buys 5m:    36  |  sells 5m: 28
+  vol 5m:     $2,434.5  |  vol 1h: $62,314.78
+  chg 5m:     12.81%  |  chg 1h: -56.65%
+  age:        30 min
+  social:     socials, twitter, website
+  score:      51.02
+  red flags:  Poor time window (17 UTC) — 15.3% hit rate | Significant hourly decline of -56.6% suggests momentum fading | Low market cap of $16K makes token highly volatile
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 36(5m) 994(1h) | Healthy heat: 47% — active buying momentum | Good liq depth: 63% | Fresh: 30m old | Has socials | Monday — best day (31%% hit, 35%% rug) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i | Buy/sell ratio of 1.39x shows net buying pressure | Clean bundle with only 11% coordination indicates organic interest
+
+  Haruspex: 0.40 — "The presence of multiple greenFlags indicates positive momentum and interest, but the significant hourly price decline and low market cap raise concerns about sustainability. Additionally, the trenchlensScore of 51.02 does not meet the threshold for higher confidence."
+  Auspex:   0.70 — "While '7Dogs' has multiple social channels, including Twitter, and exhibits strong buying flow, it also shows significant red flags such as a steep price decline and a low market cap, indicating potential volatility. The presence of organic interest is supported by a buy/sell ratio of 1.39x, suggesting net buying pressure."
+  Chronos:  0.30 — "Despite having a strong buy flow and initial momentum as indicated by the high volume in the last hour, the significant price decline of -56.65% alongside sells exceeding buys presents a concerning reversal pattern. The current environment indicates fading interest, reinforced by the significant hourly decline."
+
+  Fas:      skip — "The candidate '7Dogs' has multiple red flags, including a significant hourly price decline of -56.6% and a low market cap of $16K, raising concerns about sustainability and volatility. Additionally, with one worker below 0.4 and near-veto flags present, the overall assessment is unfavorable."
+  Nefas:    skip — "The candidate '7Dogs' exhibits several concerning factors, including a significant hourly price decline of -56.6% and red flags related to volatility due to its low market cap. With one worker scoring below 0.4 and the presence of near-veto flags, the risks outweigh the potential rewards."
+
+  Decision: SKIP  (consensus: skip)
+  Outcome:  good  <- missed
+  Cost:     $0.0067
+
+───────────────────────────────────────────────
+[9/20] MTGA · outcome=loss
+───────────────────────────────────────────────
+  mcap:       $6,440.53
   liquidity:  $0 (pre-grad)
-  buys 5m:    40  |  sells 5m: 27
-  vol 5m:     $2,243.49  |  vol 1h: $10,861.68
-  chg 5m:     -0.4%  |  chg 1h: 256%
+  buys 5m:    77  |  sells 5m: 73
+  vol 5m:     $3,970.02  |  vol 1h: $25,969.55
+  chg 5m:     -38.17%  |  chg 1h: 168%
+  age:        35 min
+  social:     socials, twitter
+  score:      34
+  red flags:  Price dropping -38.2% on volume | Sell acceleration: 5m sells 2.9x above hourly rate
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 77(5m) 599(1h) | Volume accelerating | Fresh: 35m old | Has socials | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/AxTrades30
+
+  Haruspex: 0.40 — "Despite several greenFlags indicating strong buy flow and social presence, the presence of redFlags related to price drop and sell acceleration raises concerns about potential sell pressure. The low trenchlensScore also suggests a lack of underlying strength."
+  Auspex:   0.40 — "The presence of multiple socialChannels indicates some level of visibility, but the significant redFlags suggesting price dropping and sell acceleration overshadow the positives. The balance of buys to sells is also close, indicating mixed sentiment."
+  Chronos:  0.40 — "Despite a strong volume of 25969.55 in the last hour and more buys (77) than sells (73) in the last 5 minutes, the significant price drop of -38.17% over 5 minutes indicates a reversal pattern due to heavy selling pressure. The combination of negative price change and red flags suggests caution despite the initial signs of momentum."
+
+  Fas:      skip — "The presence of significant red flags related to sharp price drops and sell acceleration strongly indicates potential sell pressure, overshadowing the positive indicators. Additionally, with all worker scores below 0.4, this suggests universal rejection of the candidate."
+  Nefas:    skip — "The significant red flags regarding price drop and sell acceleration indicate potential active dumping and sell pressure, which suggests a high likelihood of loss. Additionally, all workers scored below 0.4, reinforcing the overall negative sentiment towards this candidate."
+
+  Decision: SKIP  (consensus: skip)
+  Outcome:  loss  <- correct
+  Cost:     $0.0075
+
+───────────────────────────────────────────────
+[10/20] PUMP · outcome=loss
+───────────────────────────────────────────────
+  mcap:       $13,757.76
+  liquidity:  $0 (pre-grad)
+  buys 5m:    81  |  sells 5m: 60
+  vol 5m:     $5,709.75  |  vol 1h: $79,578.44
+  chg 5m:     -25.23%  |  chg 1h: 310%
   age:        30 min
   social:     socials, twitter
-  score:      44
-  red flags:  Sell acceleration: 5m sells 2.1x above hourly rate
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 40(5m) 291(1h) | Volume accelerating | Fresh: 30m old | Has socials | Strong time window (07 UTC) — 40%+ hit rate | 🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest) | Weekend — solid (29-30%% hit rate) | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/AsterWhale420
+  score:      43
+  red flags:  Price dropping -25.2% on volume | Tuesday — weak day (23%% hit, 31%% rug)
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 81(5m) 1290(1h) | Fresh: 30m old | Has socials | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.40 — "While there are multiple greenFlags indicating strong buy flow and a low rug danger zone, the presence of a redFlag regarding sell acceleration poses a significant concern. The trenchlensScore of 44 further suggests caution, as it indicates a lack of proven stability."
-  Auspex:   0.80 — "PIGEON exhibits significant social engagement with presence on both 'socials' and 'twitter', which is enhanced by greenFlags indicating strong buy flow and accelerating volume. Despite a concerning sell acceleration redFlag, the overall positive metrics signal strong organic interest from early adopters."
-  Chronos:  0.60 — "PIGEON shows a remarkable priceChange1h of 256%, with 40 buys compared to 27 sells, indicating positive momentum and buy pressure. Despite rising volume, the negative priceChange5m suggests a potential short-term volatility that tempers the score."
+  Haruspex: 0.40 — "Despite showing strong buy flow and having no red flags related to deployment tactics, the substantial price drop and the context of the day raise concerns about stability. The trenchlensScore indicates a lack of substantial backing."
+  Auspex:   0.60 — "The presence on multiple social channels (socials and twitter) along with strong buy flow indicates growing organic interest. However, the significant price drop and the presence of red flags, particularly regarding price action and timing, mitigate the positive signals."
+  Chronos:  0.60 — "Despite a significant price drop of -25.23% over 5 minutes, the momentum shifts positively with a high volume of $79578.44 and a notable 81 buys against 60 sells in the last 5 minutes. This signals buyer interest, albeit under a cautious upward price trend after the drop, suggesting potential but requiring further observation."
 
-  Fas:      skip — "Although auspex rates PIGEON positively, the presence of a significant red flag regarding sell acceleration raises concerns. Additionally, haruspex's score suggests caution due to the trenchlens score of 44, indicating that the project lacks proven stability. Therefore, the overall assessment does not merit a fire decision at this time."
-  Nefas:    skip — "The presence of a significant red flag regarding sell acceleration is alarming and raises major concerns about the stability and viability of PIGEON. Furthermore, shouldering a trenchlens score of 44 does not provide adequate confidence for a successful outcome given the historical evidence of only an 8% hit rate. The mixed worker assessments, with the majority scoring below 0.6, further justify the decision to skip."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  good  <- missed
-  Cost:     $0.0049
-
-───────────────────────────────────────────────
-[7/20] Toaster · outcome=good
-───────────────────────────────────────────────
-  mcap:       $5,032
-  liquidity:  $5,526.63
-  buys 5m:    42  |  sells 5m: 13
-  vol 5m:     $1,734.82  |  vol 1h: $44,964.66
-  chg 5m:     65.8%  |  chg 1h: -85.97%
-  age:        36 min
-  social:     socials, twitter, website
-  score:      41.59
-  red flags:  Weak B/S ratio: 1.2x | Tuesday — weak day (23%% hit, 31%% rug)
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 42(5m) 847(1h) | Healthy heat: 46% — active buying momentum | Good liq depth: 110% | Fresh: 36m old | Has socials | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/toasteragent
-
-  Haruspex: 0.60 — "Despite having a low trenchlensScore of 41.59 and some warning about the weak B/S ratio, the presence of multiple greenFlags like 'Graduated to DEX' and active buying momentum contribute positively to its potential. The concerns about the day of the week and the B/S ratio do impact the overall outlook but not enough to relegate it to a lower score."
-  Auspex:   0.70 — "The presence of multiple social channels, including 'twitter', coupled with positive greenFlags such as strong buy flow and active buying momentum, suggests an encouraging organic sentiment. However, the presence of redFlags, like the weak buy/sell ratio, indicates potential coordinated interest that may impact the overall sentiment."
-  Chronos:  0.30 — "While there is strong buying pressure with 42 buys and only 13 sells, the significant negative priceChange1h of -85.97 indicates a lack of momentum. Additionally, despite the relatively high volume1h, the drastic price drop suggests potential overextension, pointing towards top exhaustion rather than a stable rise."
-
-  Fas:      skip — "While two workers scored positively, the third worker's low score combined with significant concerns about the recent price drop in the last hour suggests instability. Additionally, the presence of a weak buy/sell ratio raises further red flags that limit confidence in this asset."
-  Nefas:    skip — "The presence of red flags, particularly the weak buy/sell ratio and the significant negative price change over the last hour, raises substantial concerns about the stability of this candidate. Furthermore, with one worker scoring below the threshold and the general consensus leaning towards caution, it is advisable to skip this token."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  good  <- missed
-  Cost:     $0.0057
-
-───────────────────────────────────────────────
-[8/20] Tyler · outcome=good
-───────────────────────────────────────────────
-  mcap:       $16,481
-  liquidity:  $10,134.26
-  buys 5m:    33  |  sells 5m: 24
-  vol 5m:     $1,831.12  |  vol 1h: $7,723.92
-  chg 5m:     6.5%  |  chg 1h: 80.12%
-  age:        315 min
-  social:     socials, twitter, website
-  score:      38.01
-  red flags:  Sell acceleration: 5m sells 2.0x above hourly rate | Extreme heat: 284% — possible manipulation/wash
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 33(5m) 170(1h) | Volume accelerating | Good liq depth: 61% | Mature: 315m — lowest rug rate (14%) | Gradual rise — organic | Has socials | Good time window (09 UTC) — 28-38% hit rate | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/search
-
-  Haruspex: 0.30 — "The token has redFlags indicating sell acceleration and extreme price manipulation, which raise significant concerns. Despite having several greenFlags for maturity and liquidity, the presence of the redFlags pulls the score down."
-  Auspex:   0.40 — "While Tyler shows some positive greenFlags such as strong buy flow and organic growth, the presence of redFlags indicating potential sell acceleration and manipulation undermines its credibility. Additionally, its graduated status limits potential for early adopter premium despite having multiple socialChannels."
-  Chronos:  0.80 — "Tyler shows strong momentum with a priceChange1h of 80.12% and more buys (33) than sells (24), indicating positive pressure. The rising volume of 7723.92 further supports the active interest in this token."
-
-  Fas:      skip — "The candidate has significant red flags concerning sell acceleration and extreme manipulation, which raise serious concerns despite some positive indicators from one worker. The other two workers scored below 0.4, leading to a split decision that does not support a firm commitment to fire."
-  Nefas:    skip — "The presence of significant red flags regarding sell acceleration and extreme manipulation is concerning. Additionally, two workers scored below the threshold of 0.5, which shows a lack of consensus and confidence in the token. Given the risk factors and the empirical priors indicating that the majority of tokens fail, it is prudent to skip firing on this candidate."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  good  <- missed
-  Cost:     $0.0065
-
-───────────────────────────────────────────────
-[9/20] TAGIDO · outcome=loss
-───────────────────────────────────────────────
-  mcap:       $12,992
-  liquidity:  $8,720.14
-  buys 5m:    41  |  sells 5m: 28
-  vol 5m:     $1,487.31  |  vol 1h: $38,891.47
-  chg 5m:     0.74%  |  chg 1h: -61.99%
-  age:        31 min
-  social:     socials, twitter, website
-  score:      46.18
-  red flags:  Worst time window (00 UTC) — 13-19% hit rate | Severe 1h price decline of -62% indicates major sell pressure | Unclear token purpose/narrative reduces viral potential | Low market cap with high volatility suggests pump risk
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 41(5m) 679(1h) | Healthy heat: 46% — active buying momentum | Good liq depth: 67% | Fresh: 31m old | Has socials | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/MyExistingBias | Strong recent buy flow suggests some renewed interest | High liquidity ratio provides exit opportunities
-
-  Haruspex: 0.40 — "Although TAGIDO has positive markers such as being graduated with real liquidity and an active buying momentum, the presence of multiple red flags indicating severe price decline and unclear purpose highlights significant risks."
-  Auspex:   0.40 — "While TAGIDO has multiple socialChannels and some positive greenFlags, the presence of significant redFlags such as a severe price decline of -62% and unclear token purpose undermines its potential organic interest. Furthermore, the volume data suggests a high level of selling pressure compared to buying activity."
-  Chronos:  0.20 — "Despite a strong buy flow with 41 buys versus 28 sells, the negative price change of -61.99% over the last hour indicates severe sell pressure. Additionally, the high volume but severe decline suggests top exhaustion rather than growth."
-
-  Fas:      skip — "All three workers scored below 0.6, indicating significant concerns regarding TAGIDO's stability and potential, particularly due to the severe price decline and unclear token purpose. The presence of these red flags undermines the case for commitment."
-  Nefas:    skip — "All three workers scored below 0.6, highlighting substantial concerns about TAGIDO's viability. The severe price decline and uncertain narrative contribute to high risk, making this token a likely candidate for failure."
+  Fas:      skip — "The presence of multiple red flags, particularly the significant price drop and the weak day indicator contribute to concerns about stability. Despite some positive buy flow and a reasonably good score from workers, the overall negative signals outweigh these factors."
+  Nefas:    skip — "The significant price drop of -25.23% combined with the context of a weak trading day strongly indicates potential instability and active sell pressure, which suggests a reversal pattern. Additionally, the negative price change alongside selling pressures (sells > buys) justifies skipping this candidate despite some positive indicators."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  loss  <- correct
-  Cost:     $0.0074
+  Cost:     $0.0083
 
 ───────────────────────────────────────────────
-[10/20] SILENCE · outcome=loss
+[11/20] GUDTRIP · outcome=loss
 ───────────────────────────────────────────────
-  mcap:       $16,144.68
+  mcap:       $6,459.85
   liquidity:  $0 (pre-grad)
-  buys 5m:    14  |  sells 5m: 5
-  vol 5m:     $563.14  |  vol 1h: $7,461.33
-  chg 5m:     -4.64%  |  chg 1h: 53.84%
-  age:        306 min
-  social:     socials, twitter, website
-  score:      39
-  red flags:  Wednesday — high rug rate (37%% rug) | Zero liquidity makes token untradeable | Extremely low market cap suggests minimal community adoption
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 14(5m) 108(1h) | Mature: 306m — lowest rug rate (14%) | Has socials | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
-
-  Haruspex: 0.20 — "The token has multiple explicit redFlags indicating a high rug rate, zero liquidity, and minimal community adoption. Despite some positive markers, the overwhelming red flags suggest significant risk."
-  Auspex:   0.30 — "While SILENCE has multiple social channels, the presence of several red flags, particularly the high rug rate and zero liquidity, indicates significant risks that outweigh its potential positives. The minimal market cap further suggests a lack of genuine community interest."
-  Chronos:  0.70 — "Despite a negative priceChange5m, the significant priceChange1h of 53.84% demonstrates strong upward momentum. Furthermore, with 14 buys versus only 5 sells in the last 5 minutes and robust volume growth, the token exhibits positive pressure direction."
-
-  Fas:      skip — "The high rug rate of 37% and zero liquidity are significant concerns, and two of the three workers rated the candidate below 0.4. The votes are split poorly, with one worker significantly more optimistic despite the presence of multiple red flags."
-  Nefas:    skip — "The candidate has critical red flags including a high rug rate of 37%, zero liquidity, and a very low market cap which indicates weak community support. Additionally, two out of three workers scored below 0.5, which does not align with the empirical priors necessary for firing. Overall, the risks significantly outweigh the potential positives."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  loss  <- correct
-  Cost:     $0.0082
-
-───────────────────────────────────────────────
-[11/20] Eleven · outcome=loss
-───────────────────────────────────────────────
-  mcap:       $7,397.72
-  liquidity:  $0 (pre-grad)
-  buys 5m:    94  |  sells 5m: 38
-  vol 5m:     $2,625.76  |  vol 1h: $96,454.22
-  chg 5m:     61.65%  |  chg 1h: 203%
+  buys 5m:    83  |  sells 5m: 41
+  vol 5m:     $4,694.71  |  vol 1h: $76,369.98
+  chg 5m:     41.15%  |  chg 1h: -46.49%
   age:        30 min
   social:     socials, twitter, website
-  score:      44
-  red flags:  Tuesday — weak day (23%% hit, 31%% rug) | Zero liquidity makes token effectively untradeable | Extremely low market cap with high volatility risk
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 94(5m) 1600(1h) | Fresh: 30m old | Has socials | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
+  score:      46
+  red flags:  Tuesday — weak day (23%% hit, 31%% rug) | Zero liquidity creates immediate rug risk | Vague ticker lacks memorable meme appeal
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 83(5m) 1062(1h) | Fresh: 30m old | Has socials | Has X/Twitter: https://x.com/NTerrone72394 | Clean bundle indicates organic launch
 
-  Haruspex: 0.20 — "The token has multiple explicit redFlags including zero liquidity, making it effectively untradeable, and a weak performance indicator on Tuesday, which contributes to a high risk of failure. Additionally, the trenchlensScore of 44 is significantly low."
-  Auspex:   0.40 — "Despite multiple socialChannels indicating some presence, the presence of significant redFlags such as zero liquidity and extremely low market cap increases the risk. The high buy volume relative to sells suggests organic interest, but the lack of positive engagement metrics limits confidence."
-  Chronos:  0.90 — "Strong momentum is indicated by a positive price change of 203% in the last hour, coupled with significantly more buys (94) than sells (38) and rising volume (96454.22), showcasing active interest. The low market cap of $7397.72 suggests it's at an early-stage opportunity before graduation."
+  Haruspex: 0.40 — "Despite having a clean bundle indicating an organic launch and a fresh deployer with a low rug rate, the presence of significant redFlags about zero liquidity and a weak day for deployments outweighs the positive indicators. The trenchlensScore of 46 further suggests limited potential."
+  Auspex:   0.60 — "GUDTRIP has multiple socialChannels including Twitter and a website, along with strong buy flow indicating organic interest. However, the presence of significant redFlags such as zero liquidity and vague branding suggests a higher risk that dampens the overall score."
+  Chronos:  0.40 — "Despite strong buy pressure (83 buys vs 41 sells) and high volume (4694.71 in 5m), the negative priceChange1h (-46.49) and high volume exhaustion suggest an impending downward trend."
 
-  Fas:      skip — "The presence of multiple significant red flags, particularly zero liquidity and a low market cap, poses a serious risk and outweighs the strong buy momentum indicated by one worker. The split in worker scores also indicates disagreement among them, leading to an inconclusive outcome."
-  Nefas:    skip — "The candidate presents multiple significant red flags, including zero liquidity and a low market cap, which are critical risks. Furthermore, with a substantial split in worker scores and explicit concerns about tradeability and market conditions, it is prudent to skip this candidate despite some positive indicators."
+  Fas:      skip — "The candidate has significant red flags including zero liquidity and a weak deployment day, which create a high risk for potential rug pulls. Although there is some positive buy pressure, the overall worker scores are low and do not meet the standards for firing."
+  Nefas:    skip — "The presence of crucial red flags, such as zero liquidity and a weak deployment day, greatly increases the risk of rug pulls. Even though there is some positive buy pressure, the significant concerns raised by the workers dictate a cautious approach."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  loss  <- correct
-  Cost:     $0.0090
+  Cost:     $0.0091
 
 ───────────────────────────────────────────────
-[12/20] BWULL · outcome=loss
+[12/20] DanDan · outcome=loss
 ───────────────────────────────────────────────
-  mcap:       $6,537.32
+  mcap:       $11,377.72
   liquidity:  $0 (pre-grad)
-  buys 5m:    45  |  sells 5m: 42
-  vol 5m:     $2,762.74  |  vol 1h: $15,811.14
-  chg 5m:     -11.01%  |  chg 1h: 136%
+  buys 5m:    44  |  sells 5m: 23
+  vol 5m:     $2,607.24  |  vol 1h: $105,009.52
+  chg 5m:     52.56%  |  chg 1h: 313%
   age:        30 min
   social:     socials, twitter, website
-  score:      42
-  red flags:  Price dropping -11.0% on volume
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 45(5m) 1360(1h) | Healthy B/S: 2.5x | Volume accelerating | Fresh: 30m old | Has socials | Strong time window (08 UTC) — 40%+ hit rate | 🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest) | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
+  score:      71.85
+  red flags:  Already +313% in 1h — buying top
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 44(5m) 2084(1h) | Fresh: 30m old | Has socials | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.60 — "While the token shows several positive indicators such as strong buy flow and healthy buy/sell ratio, the presence of a red flag regarding price drop on volume tempers enthusiasm. The trenchlensScore of 42 further supports a cautious outlook."
-  Auspex:   0.90 — "BWULL has multiple active socialChannels including twitter and a website, indicating strong social presence. Coupled with positive greenFlags such as strong buy flow and healthy buy/sell ratio, this suggests genuine interest despite the recent price drop."
-  Chronos:  0.80 — "Despite a negative priceChange5m, the priceChange1h is significantly positive at 136%, indicating strong momentum. Additionally, the buying pressure is favorable with 45 buys against 42 sells, supported by rising volume in both the 5m and 1h windows."
+  Haruspex: 0.90 — "With a trenchlensScore of 71.85 and multiple greenFlags indicating strong buy flow and active social presence, the potential for positive growth is high. No explicit redFlags detracting from the overall outlook further solidify its score."
+  Auspex:   0.80 — "DanDan benefits from multiple social channels and several positive green flags such as strong buy flow and a clean initial buy slot, indicating healthy organic interest. The presence of red flags about potential price manipulation creates some caution, but overall signals point to a promising start."
+  Chronos:  0.90 — "With a price change of 313% in the last hour and more buys (44) than sells (23), along with significant volume (2607.24 in 5m and 105009.52 in 1h), this token displays strong upward momentum. The market cap indicates it's at a mid bonding curve stage, further supporting potential growth."
 
-  Fas:      fire — "Despite a warning from one worker about the price drop, two workers provide strong scores and reasoning highlighting the high buy flow, healthy buy/sell ratio, and impressive short-term momentum. The token's strong social presence and acceleration in volume suggest it is primed for positive movement, making a compelling case for firing."
-  Nefas:    skip — "The presence of a significant red flag due to a price drop of -11.0% on volume, combined with mixed scores from the workers, particularly the caution expressed by one worker, suggests we should be wary. Additionally, while two workers scored above 0.6, the overall conditions do not indicate sufficient confidence to override the risk presented by the price drop, making firing unwise."
+  Fas:      fire — "DanDan exhibits strong buy pressure with significant momentum and an impressive trenchlens score. Two workers score above 0.8, indicating strong potential for growth, and there are no near-veto flags present, making it a solid candidate for investment."
+  Nefas:    skip — "Despite the positive indicators, the red flag regarding a 313% price change in the last hour suggests a potential buying top, which can indicate a reversal pattern. This dynamic, combined with the relatively low market cap and zero liquidity, raises concerns about volatility and may lead to losses."
 
   Decision: SKIP  (consensus: split)
   Outcome:  loss  <- correct
   Cost:     $0.0098
 
 ───────────────────────────────────────────────
-[13/20] Dog · outcome=rug
+[13/20] BEPE · outcome=rug
 ───────────────────────────────────────────────
-  mcap:       $46,939
-  liquidity:  $18,151.68
-  buys 5m:    598  |  sells 5m: 417
-  vol 5m:     $36,110.87  |  vol 1h: $529,397.62
-  chg 5m:     -13.33%  |  chg 1h: 24.14%
-  age:        33 min
+  mcap:       $69,999
+  liquidity:  $22,778.19
+  buys 5m:    832  |  sells 5m: 125
+  vol 5m:     $28,787.19  |  vol 1h: $726,093.21
+  chg 5m:     88.46%  |  chg 1h: 52.97%
+  age:        45 min
   social:     socials, twitter
-  score:      41.12
-  red flags:  Price dropping -13.3% on volume | Vol/Liq ratio too high — wash trading? | Worst time window (22 UTC) — 13-19% hit rate
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 598(5m) 6230(1h) | Good liq depth: 39% | Fresh: 33m old | Recent pump.fun graduate (5-60m) — momentum window | Has socials | Monday — best day (31%% hit, 35%% rug) | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i
+  score:      51.62
+  red flags:  Vol/Liq ratio too high — wash trading? | Worst time window (20 UTC) — 13-19% hit rate | Derivative name with no clear unique angle | Launch during 20 UTC window with only 13-19% historical success rate
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 832(5m) 10324(1h) | Healthy B/S: 4.4x | Healthy heat: 48% — active buying momentum | Good liq depth: 33% | Fresh: 45m old | Recent pump.fun graduate (5-60m) — momentum window | Gradual rise — organic | Has socials | Monday — best day (31%% hit, 35%% rug) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/cryptoworldfed | Recent Pump.fun graduate with momentum window | Clean bundle metrics indicate organic launch | Solid liquidity depth at 33% provides exit opportunities
 
-  Haruspex: 0.40 — "Despite being graduated with strong buy flow and sufficient liquidity depth, the presence of multiple red flags, particularly concerning price volatility and the potential for wash trading, indicates risk. The trenchlensScore of 41.12 further supports a cautious outlook."
-  Auspex:   0.50 — "Despite having multiple socialChannels, the presence of significant redFlags, such as a notable price drop and high volume/liquidity ratio indicating possible wash trading, prevent a higher score. The overall situation suggests mixed sentiments, balancing some positive engagement against pronounced risks."
-  Chronos:  0.80 — "Despite a negative priceChange5m, the positive priceChange1h of 24.14% alongside higher buys (598) than sells (417) indicates a strong momentum shift. The high volume over both periods further supports a bullish outlook."
+  Haruspex: 0.40 — "While there are numerous greenFlags indicating positive buying momentum and a graduated status with real liquidity, the presence of multiple redFlags including high Vol/Liq ratio and poor time window suggest caution. The trenchlensScore of 51.62 further substantiates a moderate risk profile."
+  Auspex:   0.60 — "BEPE has multiple socialChannels including 'socials' and 'twitter', indicating active social presence; however, it suffers from significant redFlags such as potential wash trading and a derivative name without a clear angle."
+  Chronos:  0.90 — "The token BEPE shows strong momentum with a price change of 52.97% in the last hour and a buy volume of 832, significantly exceeding the sell volume of 125. Additionally, the volume in the last hour is substantial at 726,093.21, indicating strong interest in the token."
 
-  Fas:      skip — "Despite one worker scoring high, the other two workers indicate significant concerns about price volatility and potential wash trading, leading to a mixed sentiment. The presence of multiple red flags and no strong consensus among the workers suggests caution is warranted."
-  Nefas:    skip — "The presence of multiple red flags, particularly concerning price volatility and possible wash trading, raises significant concerns. Additionally, two out of three workers scored below 0.5, indicating a lack of confidence in the token's prospects. Given the overall mixed sentiments and the empirical priors that favor caution, it is best to skip this decision."
+  Fas:      fire — "BEPE is a graduated memecoin with significant positive momentum and healthy buying pressure (over 4.4x buy/sell ratio). Despite some red flags, the strong performance metrics from chronos and multiple green flags indicate a promising opportunity."
+  Nefas:    skip — "The presence of multiple red flags, particularly the high Vol/Liq ratio which raises concerns about wash trading, and the poor time window historically indicate a higher risk for this token. Furthermore, the trenchlensScore of 51.62 suggests moderation in confidence. This data supports a cautious approach despite some positive metrics."
 
-  Decision: SKIP  (consensus: skip)
+  Decision: SKIP  (consensus: split)
   Outcome:  rug  <- correct
-  Cost:     $0.0106
+  Cost:     $0.0107
 
 ───────────────────────────────────────────────
-[14/20] Handprint · outcome=rug
+[14/20] JPL · outcome=rug
 ───────────────────────────────────────────────
-  mcap:       $46,974
-  liquidity:  $17,971.75
-  buys 5m:    300  |  sells 5m: 115
-  vol 5m:     $14,996.14  |  vol 1h: $460,067.31
-  chg 5m:     -2.39%  |  chg 1h: 25.67%
-  age:        53 min
+  mcap:       $28,955
+  liquidity:  $13,381
+  buys 5m:    77  |  sells 5m: 41
+  vol 5m:     $3,946.38  |  vol 1h: $150,131.33
+  chg 5m:     37.88%  |  chg 1h: -19.12%
+  age:        30 min
   social:     socials, twitter, website
-  score:      46.74
-  red flags:  Vol/Liq ratio too high — wash trading? | Poor time window (19 UTC) — 15.3% hit rate | High bundle percentage indicates coordinated launch | Vol/liq ratio suggests potential wash trading
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 300(5m) 8249(1h) | Healthy heat: 39% — active buying momentum | Good liq depth: 38% | Fresh: 53m old | Recent pump.fun graduate (5-60m) — momentum window | Has socials | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i | Recent pump.fun graduate in momentum window | Strong B/S ratio of 1.85x
+  score:      38.31
+  red flags:  Vol/Liq ratio too high — wash trading?
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 77(5m) 2136(1h) | Good liq depth: 46% | Fresh: 30m old | Has socials | Good time window (22 UTC) — 28-38% hit rate | Weekend — solid (29-30%% hit rate) | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.30 — "Despite having multiple greenFlags, the presence of explicit redFlags concerning the volume/liquidity ratio and indicators of potential wash trading raises significant concerns about the token's integrity. The trenchlensScore of 46.74 further suggests that this is a high-risk asset."
-  Auspex:   0.40 — "While Handprint has multiple social channels and shows positive engagement signals such as a strong buy flow and healthy liquidity depth, it also raises significant red flags regarding potential wash trading and a high bundle percentage indicating a coordinated launch. This combination raises concerns about the authenticity of interest."
-  Chronos:  0.80 — "The priceChange1h is positive at 25.67% with significant buying pressure (buys5m: 300 > sells5m: 115), showcasing strong momentum. The volume metrics also indicate healthy activity with rising volume."
+  Haruspex: 0.40 — "While the token has several greenFlags indicating positive indicators such as strong buy flow and good liquidity depth, the presence of a significant redFlag regarding a high Vol/Liq ratio raises concerns over potential wash trading, negatively impacting its overall viability."
+  Auspex:   0.60 — "JPL has multiple active social channels, including 'twitter' and 'website', which suggest engagement potential. However, the presence of a redFlag indicating possible wash trading raises concerns about the reliability of the buy/sell ratios."
+  Chronos:  0.40 — "Despite strong buying with 77 buys versus 41 sells in the last 5 minutes, the priceChange1h being negative at -19.12 indicates downward momentum and potential top exhaustion. The high volume does indicate some activity, but the negative price change and the risk of wash trading suggest caution."
 
-  Fas:      skip — "Although chronos provides a strong score based on momentum, the presence of significant red flags, particularly regarding potential wash trading and a high bundle percentage, suggests serious concerns about market integrity. The other workers' lower scores reinforce the notion that caution is warranted here."
-  Nefas:    skip — "The presence of red flags regarding potential wash trading and high bundle percentage significantly undermines market integrity for Handprint. Workers scored below 0.5 on two counts, indicating a lack of consensus on its viability, and the structural conditions suggest caution is warranted despite one worker's more optimistic view."
+  Fas:      skip — "The presence of a significant red flag regarding a high Vol/Liq ratio raises concerns over potential wash trading, which impacts the overall viability of JPL. Additionally, the worker scores show a split with low scores in two cases, indicating a lack of consensus on its potential."
+  Nefas:    skip — "The significant red flag regarding a high Vol/Liq ratio suggests potential wash trading, which is a serious concern for the token's viability. Moreover, the worker scores reveal a split decision with two workers scoring below the threshold, reflecting uncertainty about its potential success."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  rug  <- correct
   Cost:     $0.0115
 
 ───────────────────────────────────────────────
-[15/20] SOLANA · outcome=rug
+[15/20] SCAM · outcome=rug
 ───────────────────────────────────────────────
-  mcap:       $46,480
-  liquidity:  $17,447.59
-  buys 5m:    671  |  sells 5m: 225
-  vol 5m:     $16,030.13  |  vol 1h: $501,399.9
-  chg 5m:     -19.43%  |  chg 1h: 31.75%
-  age:        31 min
-  social:     none
-  score:      35.49
-  red flags:  Price dropping -19.4% on volume | Vol/Liq ratio too high — wash trading? | No X/Twitter linked — limited community visibility
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 671(5m) 7373(1h) | Healthy heat: 38% — active buying momentum | Good liq depth: 38% | Fresh: 31m old | Recent pump.fun graduate (5-60m) — momentum window | Good time window (20 UTC) — 28-38% hit rate | Weekend — solid (29-30%% hit rate) | Graduated to DEX — has real liquidity pool
+  mcap:       $24,167
+  liquidity:  $12,373.02
+  buys 5m:    22  |  sells 5m: 18
+  vol 5m:     $1,421.46  |  vol 1h: $23,446.98
+  chg 5m:     -5.14%  |  chg 1h: -47.07%
+  age:        105 min
+  social:     socials, twitter, website
+  score:      45.89
+  red flags:  Price dropping -5.1% on volume | Friday — highest rug rate (60%% rug)
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 22(5m) 459(1h) | Healthy heat: 73% — active buying momentum | Good liq depth: 51% | Fresh: 105m old | Has socials | Good time window (04-08 UTC) — 32%% hit rate | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.40 — "Although the token has graduated and exhibits some positive momentum indicators, the presence of significant red flags, including a price drop and high volume-to-liquidity ratio, indicates potential instability. The trenchlensScore is low, further supporting caution."
-  Auspex:   0.10 — "Despite having strong buy flow and a recent graduation to DEX, the absence of social channels and multiple red flags regarding price drop and potential wash trading indicate a lack of organic community interest."
-  Chronos:  0.70 — "Despite a strong buy flow with 671 buys against 225 sells in the last 5 minutes, the negative price change of -19.43% over 5 minutes indicates a potential top exhaustion, which affects scoring. However, the positive price change of 31.75% over the last hour suggests a turnaround, making this situation precarious yet promising."
+  Haruspex: 0.60 — "Despite having a low trenchlensScore and redFlags related to price drop and rug rate, the token exhibits multiple greenFlags indicating a strong buy flow and healthy liquidity. Its graduated status with real liquidity pool adds further positive structure."
+  Auspex:   0.60 — "The token has multiple active social channels, including Twitter, which suggests a presence but has a mix of redFlags and greenFlags. The negative price change and potential rug risk indicate cautious engagement, despite healthy buying momentum and liquidity."
+  Chronos:  0.20 — "Despite a marketCap of $24,167 indicating early advancement, the priceChange1h is significantly negative at -47.07%, and the small volume with sells (18) exceeding buys (22) suggests potential top exhaustion. The overall market sentiment is poor due to dropping prices on increasing volume, leading to low confidence."
 
-  Fas:      skip — "The presence of multiple red flags, including a significant price drop and concerns over potential wash trading, raises caution despite some positive indicators. Additionally, the workers are split, with one scoring above 0.7 but others significantly lower, which weakens the conviction in a firing decision."
-  Nefas:    skip — "Multiple significant red flags are present, including a major price drop and concerns over wash trading. While there are some positive indicators, the mixed worker scores, particularly auspex's low score and explicit veto regarding social channels, indicate a lack of consensus and highlight potential risks."
+  Fas:      fire — "The project is graduated with no near-veto flags and the conditions point towards potential positive upside despite some red flags. The combination of strong buying momentum and healthy liquidity flow suggests an opportunity worth pursuing."
+  Nefas:    skip — "The candidate displays concerning red flags, particularly the significant -5.14% price change on volume and a potential rug risk due to the negative trend during a time known for high rug rates. These issues suggest active selling pressure despite showing some green flags, warranting a cautious approach."
 
-  Decision: SKIP  (consensus: skip)
+  Decision: SKIP  (consensus: split)
   Outcome:  rug  <- correct
   Cost:     $0.0123
 
 ───────────────────────────────────────────────
-[16/20] youngin · outcome=rug
+[16/20] Ox · outcome=rug
 ───────────────────────────────────────────────
-  mcap:       $35,081
-  liquidity:  $14,436.27
-  buys 5m:    62  |  sells 5m: 40
-  vol 5m:     $2,534.96  |  vol 1h: $22,555.13
-  chg 5m:     -9.85%  |  chg 1h: 1.3%
-  age:        34 min
+  mcap:       $14,881.04
+  liquidity:  $0 (pre-grad)
+  buys 5m:    55  |  sells 5m: 26
+  vol 5m:     $4,204.85  |  vol 1h: $25,273.74
+  chg 5m:     76.01%  |  chg 1h: 485%
+  age:        52 min
   social:     socials, twitter
-  score:      35.12
-  red flags:  Price dropping -9.8% on volume | Tuesday — weak day (23%% hit, 31%% rug) | BUNDLE: 58% of early buys are bundled — fake demand from 0 wallets
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 62(5m) 2993(1h) | Healthy B/S: 8.5x | Good liq depth: 41% | Fresh: 34m old | Has socials | Strong time window (19 UTC) — 40%+ hit rate | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/search
+  score:      84.25
+  red flags:  Already +485% in 1h — buying top | Extreme heat: 200% — possible manipulation/wash
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 55(5m) 374(1h) | Volume accelerating | Fresh: 52m old | Has socials | Prime time window (08-12 UTC) — 42.5%% hit rate | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.20 — "The token has significant red flags, particularly the BUNDLE indicator which shows 58% of early buys are bundled, suggesting fake demand. Additionally, the price drop of -9.8% on volume indicates instability."
-  Auspex:   0.30 — "Despite having social channels on 'socials' and 'twitter', the presence of multiple redFlags, such as a significant price drop and indications of fake demand, outweighs any positive social signals. The post-graduation status also diminishes the potential for organic interest."
-  Chronos:  0.60 — "Despite a positive priceChange1h of 1.3% and a healthy buy-sell ratio of 1.55, the significant price drop of -9.85% over 5m and the presence of multiple red flags indicate underlying weakness. The volume over both windows is rising but the negative price momentum dampens the overall bullish outlook."
+  Haruspex: 0.90 — "The token shows strong buy activity with a trenchlensScore of 84.25 and multiple greenFlags indicating organic growth and favorable timing, outweighing concerns about pump activity. The absence of explicit redFlags further supports its potential."
+  Auspex:   0.40 — "Despite having multiple socialChannels and several positive greenFlags, the significant redFlags regarding price manipulation and potential buying top signal concern over organic interest. The rapid price increase and high volatility suggest speculative activity rather than genuine community engagement."
+  Chronos:  0.90 — "The priceChange1h is a significant +485%, coupled with 55 buys surpassing 26 sells indicates strong upward momentum and buy pressure. Additionally, the volume is rising with a 1h volume of 25273.74, showing heightened interest."
 
-  Fas:      skip — "The presence of the BUNDLE flag, indicating fake demand from 58% of early buys, represents a near-veto situation. Additionally, all three workers score below the threshold for a strong positive case, highlighting significant concerns about the token's stability and demand."
-  Nefas:    skip — "The presence of the BUNDLE flag and the significant price drop of -9.85% alongside poor scores from the workers indicate strong reasons to avoid firing. The majority of workers express concerns about fake demand and underlying weakness in the token's stability. Additionally, the explicit vetoes and structural indicators further support the decision to skip this token."
+  Fas:      skip — "The presence of significant red flags, particularly regarding potential price manipulation and buying at the top, raises concerns about the sustainability of the current momentum. Although the workers show strong scores, the risks associated with the red flags cannot be overlooked."
+  Nefas:    skip — "The significant red flags regarding potential manipulation and buying at the top indicate a high risk of an unsustainable price increase. While there is strong buy pressure, these concerns suggest that the upward momentum may not be reliable."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  rug  <- correct
   Cost:     $0.0131
 
 ───────────────────────────────────────────────
-[17/20] BOAR · outcome=neutral
+[17/20] elon · outcome=neutral
 ───────────────────────────────────────────────
-  mcap:       $2,430.12
-  liquidity:  $0 (pre-grad)
-  buys 5m:    0  |  sells 5m: 1
-  vol 5m:     $0.88  |  vol 1h: $56,948.3
-  chg 5m:     0.05%  |  chg 1h: -15.81%
-  age:        30 min
-  social:     socials, twitter
-  score:      49
-  red flags:  Weak B/S ratio: 1.1x | 5m sells > buys — active dumping | Only 1 txns in 5m
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Fresh: 30m old | Has socials | Strong time window (07 UTC) — 40%+ hit rate | 🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest) | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/beamgmi
-
-  Haruspex: 0.40 — "This token shows red flags including active dumping with 5m sells exceeding buys and a weak buy/sell ratio, which raises concerns about sustainability. Although there are several green flags such as having socials and being over 30 minutes old, the lack of strong enough indicators outweighs them."
-  Auspex:   0.40 — "The presence of two social channels (socials, twitter) combined with multiple positive green flags suggests a degree of organic interest. However, the active selling with no buys and red flags indicating a weak buy/sell ratio and potential dumping dampens the overall sentiment."
-  Chronos:  0.10 — "Despite a high volume of 56948.3 in the last hour, the negative price change of -15.81% and more sells (1) than buys (0) indicate a bearish trend and active dumping, showing a lack of interest. Additionally, the market cap of $2430.12 confirms this asset is still very early stage with low upward momentum."
-
-  Fas:      skip — "All three workers have expressed significant concerns regarding the active dumping, weak buy/sell ratio, and lack of bullish indicators. The presence of near-veto flags solidifies the decision against proceeding further with this candidate."
-  Nefas:    skip — "The token presents significant risks, including active dumping and a weak buy/sell ratio, which are both strong indicators of potential failure. Moreover, all workers scored below the acceptable threshold, reinforcing the skepticism around this candidate's sustainability and demand."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  neutral  <- missed
-  Cost:     $0.0139
-
-───────────────────────────────────────────────
-[18/20] Yippee · outcome=neutral
-───────────────────────────────────────────────
-  mcap:       $1,804
-  liquidity:  $3,285.97
-  buys 5m:    3  |  sells 5m: 1
-  vol 5m:     $40.24  |  vol 1h: $46,709.96
-  chg 5m:     4.14%  |  chg 1h: -94.79%
-  age:        30 min
-  social:     socials, twitter, website
-  score:      59.03
-  red flags:  Weak B/S ratio: 1.0x | Vol/Liq ratio too high — wash trading? | Only 4 txns in 5m | Cold heat: 1% — dying momentum
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Good liq depth: 182% | Fresh: 30m old | Has socials | Monday — best day (31%% hit, 35%% rug) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/yippee_coin
-
-  Haruspex: 0.40 — "The token shows positive indicators such as being graduated with real liquidity and having social channels, but the presence of significant red flags including a weak buy/sell ratio and signs of potential wash trading negatively impacts its score."
-  Auspex:   0.40 — "While Yippee has a presence on multiple social channels, it also carries significant red flags such as a weak buy/sell ratio and indications of possible wash trading. The market dynamics suggest a lack of organic engagement despite some green flags related to its liquidity and age."
-  Chronos:  0.10 — "Despite having a positive buy-sell ratio and a decent volume in the last hour, the significant negative price change of -94.79% indicates a severe downturn and lack of interest from traders. The volume trends suggest declining momentum, reinforced by red flags indicating potentially manipulative trading activity and a low amount of transactions."
-
-  Fas:      skip — "The decision is to skip firing due to the presence of multiple significant red flags, including a weak buy/sell ratio and indications of potential wash trading. All three workers have provided low scores, reflecting concerns over the token's performance and momentum."
-  Nefas:    skip — "Multiple significant red flags are present, including a weak buy/sell ratio and indications of potential wash trading. The low scores from all three workers reflect a consensus of concern about the token's performance and momentum, reinforcing the decision to skip firing."
-
-  Decision: SKIP  (consensus: skip)
-  Outcome:  neutral  <- missed
-  Cost:     $0.0147
-
-───────────────────────────────────────────────
-[19/20] MAGIC · outcome=neutral
-───────────────────────────────────────────────
-  mcap:       $3,806.43
+  mcap:       $34,994.66
   liquidity:  $0 (pre-grad)
   buys 5m:    0  |  sells 5m: 0
-  vol 5m:     $0  |  vol 1h: $31,496.07
-  chg 5m:     0%  |  chg 1h: -47.22%
-  age:        60 min
+  vol 5m:     $0  |  vol 1h: $7,239.9
+  chg 5m:     0%  |  chg 1h: 984%
+  age:        47 min
   social:     socials, twitter
-  score:      31
-  red flags:  Only 0 txns in 5m
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Fresh: 60m old | Has socials | Friday — strongest day (44%% hit, 16%% rug) | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/mmsprintr
+  score:      33
+  red flags:  Only 0 txns in 5m | Already +984% in 1h with fading volume — late entry | Tuesday — weak day (23%% hit, 31%% rug) | BUNDLE: 68% of early buys are bundled — fake demand from 0 wallets
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Fresh: 47m old | Has socials | Has X/Twitter: https://x.com/jnpayne
 
-  Haruspex: 0.40 — "The project benefits from several greenFlags, indicating potential resilience against rug pulls, but the presence of only 0 transactions in the last 5 minutes acts as a significant redFlag, impacting immediate activity. The low trenchlensScore of 31 suggests that this token may not have strong momentum."
-  Auspex:   0.50 — "MAGIC has multiple socialChannels indicating some presence, but the total lack of transactions in the last 5 minutes raises redFlags regarding activity. Despite greenFlags suggesting it is fresh and past the immediate risk of a rug, the absence of engagement on trading volumes signals a lack of organic interest."
-  Chronos:  0.10 — "With a significant negative price change of -47.22% and zero buys or sells in the last 5 minutes, this token shows clear signs of a dead pattern and a lack of interest. The high volume of 31496.07 in the last hour does not compensate for the negative momentum and absence of buying pressure."
+  Haruspex: 0.10 — "The presence of the BUNDLE red flag indicates potential manipulation with 68% of early buys being bundled, which points to artificial demand. Additionally, the transaction activity is non-existent in the last 5 minutes and a high price change combined with fading volume suggests a risky entry point."
+  Auspex:   0.10 — "The presence of redFlags such as 'Only 0 txns in 5m' and 'BUNDLE: 68% of early buys are bundled — fake demand from 0 wallets' indicates a lack of genuine organic interest, despite having some social channels. The absence of any recent purchases further diminishes confidence in the token's sentiment."
+  Chronos:  0.10 — "Despite a significant price change of 984% in the last hour, the lack of any transactions in the last 5 minutes indicates no active engagement, leading to a dead pattern. Moreover, the warning signs of late entry and fading volume suggest exhaustion with potential for a reversal."
 
-  Fas:      skip — "All three workers have scored below the threshold, indicating a lack of strong positive sentiment. The presence of a significant red flag, specifically the absence of transactions in the last 5 minutes, further supports the decision to skip. Overall, the data suggests insufficient momentum and interest in the token."
-  Nefas:    skip — "The candidates' warning signs are compelling, particularly the lack of transactions in the last 5 minutes, which raises significant concerns about market engagement. Additionally, all three workers scored below the threshold, suggesting a consensus on the lack of strong positive sentiment. Current structural conditions do not support a favorable decision to fire."
+  Fas:      skip — "The presence of a BUNDLE flag indicates potential manipulation and fake demand, while zero transactions in the last 5 minutes and signs of a late entry with fading volume further amplify the risk. All workers scored below the fire threshold, reinforcing the decision to skip."
+  Nefas:    skip — "The presence of the BUNDLE flag indicates potential manipulation with 68% of early buys being bundled, confirming that this is likely artificial demand. Additionally, the lack of transactions in the last 5 minutes and high price change with fading volume signal significant risk and a lack of genuine interest, leading to a strong case for skipping this opportunity."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  neutral  <- missed
-  Cost:     $0.0155
+  Cost:     $0.0140
 
 ───────────────────────────────────────────────
-[20/20] Ryder · outcome=neutral
+[18/20] SELLECK · outcome=neutral
 ───────────────────────────────────────────────
-  mcap:       $13,876.03
+  mcap:       $10,678.73
   liquidity:  $0 (pre-grad)
-  buys 5m:    36  |  sells 5m: 16
-  vol 5m:     $1,128.18  |  vol 1h: $10,872.05
-  chg 5m:     5.22%  |  chg 1h: 29.88%
-  age:        87 min
+  buys 5m:    70  |  sells 5m: 50
+  vol 5m:     $3,821.11  |  vol 1h: $67,266.18
+  chg 5m:     -13.67%  |  chg 1h: 234%
+  age:        30 min
   social:     socials, twitter
-  score:      63.35
-  red flags:  Worst time window (20 UTC) — 13-19% hit rate | Friday — highest rug rate (60%% rug) | Friday + late-night overlap — worst combo (60% rug/13% hit)
-  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 36(5m) 196(1h) | Fresh: 87m old | Gradual rise — organic | Has socials | Clean first slot — no coordinated launch buys | Has X/Twitter: https://x.com/i
+  score:      34
+  red flags:  Price dropping -13.7% on volume
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 70(5m) 1088(1h) | Fresh: 30m old | Has socials | Strong time window (08 UTC) — 40%+ hit rate | Weekend — solid (29-30%% hit rate) | Has X/Twitter: https://x.com/i
 
-  Haruspex: 0.40 — "Despite showing some positive indicators such as strong buy flow and organic rise, the redFlags related to a high potential rug rate combined with the timing of the launch significantly diminish the token's trustworthiness. The trenchlensScore also falls below the threshold for higher scoring."
-  Auspex:   0.60 — "Ryder has multiple socialChannels (socials, twitter) and shows strong buy flow, indicating potential organic interest, despite the presence of significant redFlags related to timing and risk of a rug pull. The combination of factors suggests caution but not a complete dismissal."
-  Chronos:  0.90 — "The token has shown a strong upward momentum with a price change of 29.88% in the last hour, along with more buys (36) than sells (16) in the last 5 minutes and rising volume (1128.18 in 5m and 10872.05 in 1h). Despite some red flags, the overall indicators suggest a healthy pump pattern."
+  Haruspex: 0.60 — "Despite a low trenchlensScore of 34, the token has several positive indicators including strong buy flow and being 30 minutes old, suggesting potential despite a small price drop. However, the lack of liquidity and a specific red flag on price volatility temper the optimism."
+  Auspex:   0.70 — "SELLECK has a strong presence on social channels (socials, twitter) along with several positive greenFlags indicating organic engagement and fresh interest. However, the significant price drop and redFlag related to volume alert to potential volatility, preventing a higher score."
+  Chronos:  0.70 — "Despite a significant price change of 234% in the last hour and a strong buy flow of 70 buys against 50 sells in the last 5 minutes, the overall price drop of 13.67% in the last 5 minutes indicates momentum challenges. The rising volume across both windows supports ongoing interest but does not fully negate the negative price dynamics."
 
-  Fas:      skip — "The presence of significant red flags indicating a high rug rate—specifically linked to timing and market conditions—counters the positive signs of buy flow and upward momentum. One worker is notably bullish (chronos), but overall scores show division, with two workers not endorsing the candidate strongly enough to justify a decision to fire."
-  Nefas:    skip — "The combination of significant red flags, particularly concerning the timing and potential for rug pulls, outweighs the positive indicators from the workers. Two workers score below the threshold of 0.5, indicating strong skepticism regarding the token's viability. Additionally, the presence of risk factors and historical evidence of high failure rates further supports the decision to skip this candidate."
+  Fas:      skip — "SELLECK displays some positive indicators, such as good buy flow and social engagement, but the significant price drop and red flags around price volatility temper optimism. With 0.6 and 0.7 worker scores and a negative momentum observed, the lack of liquidity and the notable decline in price over recent periods mean it is not a safe fire candidate."
+  Nefas:    skip — "There is a significant price drop of -13.67% along with a sell pressure in the recent timeframe (sells > buys), which signals a reversal pattern that indicates it is not a safe investment. The red flag regarding price volatility particularly highlights the risk at this moment."
 
   Decision: SKIP  (consensus: skip)
   Outcome:  neutral  <- missed
-  Cost:     $0.0164
+  Cost:     $0.0148
+
+───────────────────────────────────────────────
+[19/20] SOLAMA · outcome=neutral
+───────────────────────────────────────────────
+  mcap:       $20,598
+  liquidity:  $5,521.14
+  buys 5m:    2  |  sells 5m: 1
+  vol 5m:     $34.21  |  vol 1h: $3,103.8
+  chg 5m:     1.02%  |  chg 1h: 62.53%
+  age:        169 min
+  social:     socials, twitter
+  score:      41.27
+  red flags:  Only 3 txns in 5m | Already +1735% in 6h — extremely extended | Cold heat: 13% — dying momentum
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Good liq depth: 27% | Mature: 169m — lowest rug rate (14%) | Gradual rise — organic | Has socials | Friday — strongest day (44%% hit, 16%% rug) | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/SOLAMAV2
+
+  Haruspex: 0.50 — "The token has a trenchlensScore of 41.27, indicating weak metrics, combined with several redFlags suggesting concerning transaction patterns and price volatility. Additionally, while there are multiple greenFlags, the presence of redFlags prevents a higher score due to risk factors involved."
+  Auspex:   0.40 — "SOLAMA has active social channels including Twitter, indicating some level of engagement. However, the presence of multiple redFlags such as a low transaction count and an extremely high price increase suggests coordinated activity rather than organic interest, dampening the overall score."
+  Chronos:  0.40 — "Despite positive priceChange1h (62.53%) and more buys than sells (2 vs 1), the extremely high price increase (+1735% in 6h) and low transaction volume (only 3 txns in 5m) indicate potential top exhaustion and declining momentum."
+
+  Fas:      skip — "The presence of multiple red flags, including a very high price increase and low transaction volume, combined with the low worker scores below the required thresholds, indicates significant risk and potential for loss. Hence, it's safer to skip this candidate."
+  Nefas:    skip — "The presence of multiple red flags, particularly the extremely high price increase and low transaction volumes, coupled with all three worker scores below 0.6, strongly indicates significant risk. Additionally, the vetoes from the worker Chronos further strengthen the case for skipping this candidate."
+
+  Decision: SKIP  (consensus: skip)
+  Outcome:  neutral  <- missed
+  Cost:     $0.0156
+
+───────────────────────────────────────────────
+[20/20] KingJohnny · outcome=neutral
+───────────────────────────────────────────────
+  mcap:       $9,497
+  liquidity:  $7,501.64
+  buys 5m:    33  |  sells 5m: 26
+  vol 5m:     $2,297.65  |  vol 1h: $64,448.07
+  chg 5m:     35.76%  |  chg 1h: -76.75%
+  age:        63 min
+  social:     socials, twitter
+  score:      44.78
+  red flags:  Poor time window (18 UTC) — 15.3% hit rate | Massive -76% price drop in last hour despite buy pressure suggests large seller dumping | Generic king theme without clear differentiation or viral potential
+  green flags: 30m+ age — past rug danger zone (28%% rug rate) | Strong buy flow: 33(5m) 1195(1h) | Healthy heat: 43% — active buying momentum | Good liq depth: 79% | Fresh: 63m old | Has socials | Clean first slot — no coordinated launch buys | Graduated to DEX — has real liquidity pool | Has X/Twitter: https://x.com/i | Buy/sell ratio of 1.27x shows some buyer conviction despite price decline
+
+  Haruspex: 0.40 — "The token exhibits strong greenFlags indicating healthy liquidity depth and buy momentum, however, the presence of multiple redFlags such as a significant price drop and generic theme dilutes its positive assessment."
+  Auspex:   0.30 — "While KingJohnny has a buy/sell ratio of 1.27x and multiple socialChannels, it suffers from significant redFlags including a massive 76% price drop and poor differentiation, suggesting a lack of organic interest. The generic branding and large seller dumping indicate that interest may not be sustainable."
+  Chronos:  0.40 — "Despite the strong buy pressure (33 buys vs 26 sells) and significant volume in the last 5 minutes, the massive -76.75% price change over the past hour indicates a significant loss of momentum and suggests seller dominance. The market cap is still under $10k, indicating it's very early in its lifecycle, and overall health is questionable with warning signs."
+
+  Fas:      skip — "Despite the presence of some favorable green flags, the multiple significant red flags, particularly the massive price drop and poor differentiation in branding, indicate a high risk of loss. The worker scores are too low and no fire conditions are met, necessitating a skip."
+  Nefas:    skip — "The presence of significant red flags, particularly the -76% price drop alongside the low worker scores (none above 0.4), indicates a strong likelihood of loss. Additionally, the buying momentum is overshadowed by the selling pressure and poor differentiation, suggesting instability and lack of organic interest."
+
+  Decision: SKIP  (consensus: skip)
+  Outcome:  neutral  <- missed
+  Cost:     $0.0165
 
 
 ═══════════════════════════════════════════════════════
@@ -512,33 +513,40 @@ Selected 20 stratified candidates
    Coordinators: openai/gpt-4o-mini
 ═══════════════════════════════════════════════════════
 
-Total cost: $0.0164
-Total tokens: in=74931, out=8533
+Total cost: $0.0165
+Total tokens: in=75306, out=8657
 Successful worker calls: 60/60
 Successful coordinator calls: 40/40
 Parse failures: 0
 Timeouts: 0
-Splits (fas/nefas disagreed): 2
-Average latency per call: 1880ms
+Splits (fas/nefas disagreed): 5
+Average latency per call: 1658ms
 
-Outcomes when swarm fired (0):
-  Hit: 0, Good: 0, Loss: 0, Rug: 0, Neutral: 0
+Outcomes when swarm fired (1):
+  Hit: 1, Good: 0, Loss: 0, Rug: 0, Neutral: 0
 
-Outcomes when swarm skipped (20):
-  Hit (missed): 4, Good (missed): 4, Loss (correct): 4, Rug (correct): 4
+Outcomes when swarm skipped (19):
+  Hit (missed): 3, Good (missed): 4, Loss (correct): 4, Rug (correct): 4
 
-Sample SKIP (ELUN):
-  Haruspex: 0.40 — "The token has a trenchlensScore of 45.72, indicating moderate potential; however, the presence of redFlags related to price decline and suspicious volume/liquidity ratio raises concerns about possible wash trading. Despite several positive markers, the redFlags lead to a more cautious evaluation."
-  Auspex:   0.40 — "While ELUN has multiple socialChannels, the presence of significant redFlags such as price drops and potential wash trading raise concerns about the authenticity of interest. Additionally, despite a strong buy flow, the high price decline indicates market instability, suggesting a lack of organic engagement."
-  Chronos:  0.60 — "Despite a substantial price change of 177% in the last hour and more buys than sells, the significant recent negative change of -18.03% in the last 5 minutes suggests potential volatility. The high volume 1h signals interest, but the adverse price movement creates caution."
-  Fas:      skip — "All three workers exhibit concerns regarding significant red flags, particularly in price decline and potential wash trading, leading to a lack of confidence in the token's stability and authenticity. Additionally, no worker scored sufficiently high to warrant a fire despite some positive markers."
-  Nefas:    skip — "The presence of critical red flags, particularly regarding price drops and potential wash trading, warrants a cautious approach. With two workers scoring below 0.5 and one worker explicitly vetoing based on these concerns, there is insufficient consensus to proceed with the fire decision."
+Sample FIRE (LAIKA):
+  Haruspex: 0.60 — "Despite a trenchlensScore of 43.92, LAIKA benefits from multiple greenFlags such as having a graduated status, good liquidity depth, and strong buy flow, which indicate positive momentum. The lack of redFlags further enhances its profile, making it a token worth monitoring closely."
+  Auspex:   0.90 — "LAIKA has multiple social channels including Twitter and a dedicated website, paired with several positive green flags indicating organic interest and a strong buy flow. The absence of red flags further reinforces its potential as a solid investment."
+  Chronos:  1.00 — "With a price change of 72.77% over the last hour, strong buy flow (124 buys vs. 75 sells in the last 5 minutes), and rising volume (12048.38 in 5m and 149807.96 in 1h), LAIKA is showing robust momentum and pressure direction favoring buyers."
+  Fas:      fire — "LAIKA holds a graduated status with zero red flags, supported by strong buy pressure and positive price momentum, making it a compelling investment opportunity. Additionally, the combined worker scores indicate a solid consensus for action."
+  Nefas:    fire — "All conditions for conceding are met: there are no near-veto flags, no worker has a veto, multiple workers scored significantly above 0.6, and recent buys surpass sells without active sell pressure. The data showcases robust buy momentum and strong indicators for potential growth."
 
-Sample SPLIT (Jelly) — fas/nefas disagreed:
-  Haruspex: 0.80 — "Although the trenchlensScore is below 70, the presence of multiple greenFlags such as 'Strong buy flow', 'Healthy heat', and 'Graduated to DEX' without any redFlags indicates a positive outlook for this token."
-  Auspex:   0.90 — "Jelly has multiple social channels including socials, twitter, and a website, coupled with strong green flags indicating organic engagement and healthy buying momentum. The absence of red flags further reinforces the sentiment of genuine interest among early adopters, despite being a graduated token."
-  Chronos:  0.90 — "Jelly shows strong momentum with a price change of 22.41% in the last hour, a solid volume of 12052.66, and 11 buys against 0 sells in the last 5 minutes, indicating a healthy pump pattern."
-  Fas:      fire — "With two workers scoring above 0.8 and providing compelling reasoning based on strong green flags, robust buying momentum, and the absence of any red flags, the positive outlook for Jelly is clear. The overall structure supports a bullish case, indicating that the token is primed for further growth."
-  Nefas:    skip — "Despite the positive evaluations from the workers, the trenchlensScore is below 70, suggesting potential risk factors. Additionally, the market dynamics show reliance on organic momentum but do not definitively eliminate the uncertainty typical in this market segment. Given the baseline hit rate is only 8%, caution is warranted until further confirmation is observed."
+Sample SKIP (XSLOP):
+  Haruspex: 0.10 — "The presence of explicit redFlags, particularly BUNDLE indicating potential artificial demand, significantly diminishes the viability of this token. Despite some greenFlags, the overall risk is too high with a trenchlensScore of only 32."
+  Auspex:   0.20 — "This token exhibits redFlags, including a warning about high entry risk due to extreme price movement and fake demand signals. Despite having active socialChannels, the redFlags heavily outweigh the positives, indicating a lack of genuine organic engagement."
+  Chronos:  0.90 — "With a priceChange1h of 796% combined with buys5m significantly exceeding sells5m (131 vs 63), the token is showing strong momentum and demand, supported by rising volume (71114.84)."
+  Fas:      skip — "The candidate has multiple red flags present, particularly a BUNDLE flag indicating artificial demand, alongside a high entry risk due to excessive price movement. These factors, combined with low worker scores and a lack of genuine engagement, warrant a hard skip despite some positive momentum."
+  Nefas:    skip — "The presence of a BUNDLE flag indicating artificial demand, along with a significant price increase in a short timeframe, suggests a high entry risk that cannot be overlooked. These factors outweigh the positive indicators and demonstrate that the token's viability is significantly diminished."
+
+Sample SPLIT (PEPEPUNCH) — fas/nefas disagreed:
+  Haruspex: 0.40 — "Despite a high buy/sell ratio and the benefit of being graduated, the significant red flags regarding volatility due to low market cap and the possibility of wash trading raise concerns. The trenchlensScore of 42.12 also indicates underlying weakness."
+  Auspex:   0.60 — "PEPEPUNCH has multiple social channels and numerous positive greenFlags indicating genuine interest, but the presence of significant redFlags, including potential wash trading and volatility due to low market cap, dampens the overall sentiment. The scoring reflects a mix of organic engagement and coordinated activity."
+  Chronos:  0.90 — "The priceChange1h is significantly positive at 79.74%, with buys (139) exceeding sells (125), supported by a strong volume of 248398.33 in the last hour indicating rising interest and momentum."
+  Fas:      fire — "PEPEPUNCH has graduated with zero near-veto flags and multiple positive indicators such as strong buy flow and high price momentum, leading to a highly favorable firing signal despite some concerns."
+  Nefas:    skip — "Despite the positive indicators, significant red flags regarding wash trading and the very low market cap increase the risk of volatility, which cannot be overlooked. The worker scores are split, with one worker offering a low score, indicating uncertainty in the data."
 
 ═══════════════════════════════════════════════════════
