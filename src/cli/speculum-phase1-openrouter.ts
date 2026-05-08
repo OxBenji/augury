@@ -32,6 +32,9 @@ const MAX_CONSECUTIVE_PARSE_FAILURES = 5;
 const MAX_CONSECUTIVE_TIMEOUTS = 5;
 const SLOW_CALL_WARN_MS = 25000; // warn if >25s
 
+// ── CLI flags ───────────────────────────────────────────────────────
+const VERBOSE = process.argv.includes("--verbose");
+
 // ── Helpers ─────────────────────────────────────────────────────────
 
 function pickStratified(
@@ -225,9 +228,30 @@ async function main(): Promise<void> {
 
   for (let i = 0; i < picks.length; i++) {
     const c = picks[i];
-    process.stdout.write(
-      `[${(i + 1).toString().padStart(2)}/${picks.length}] ${c.symbol.padEnd(20)} `,
-    );
+    const divider = "───────────────────────────────────────────────";
+
+    if (VERBOSE) {
+      const socials = [
+        c.features.has_socials && "socials",
+        c.features.has_twitter && "twitter",
+        c.features.has_website && "website",
+      ].filter(Boolean);
+
+      console.log(divider);
+      console.log(`[${i + 1}/${picks.length}] ${c.symbol} · outcome=${c.outcome.classification}`);
+      console.log(divider);
+      console.log(`  holders:    ${c.features.top10_holder_pct}%`);
+      console.log(`  buys 5m:    ${c.features.buys_5m}`);
+      console.log(`  sells 5m:   ${c.features.sells_5m}`);
+      console.log(`  liquidity:  $${c.features.liquidity_usd.toLocaleString()}`);
+      console.log(`  deployer:   ${c.features.pair_age_minutes} min old`);
+      console.log(`  social:     ${socials.length > 0 ? socials.join(", ") : "none"}`);
+      console.log();
+    } else {
+      process.stdout.write(
+        `[${(i + 1).toString().padStart(2)}/${picks.length}] ${c.symbol.padEnd(20)} `,
+      );
+    }
 
     const pipeline = await runPipelineOpenRouter(c, { model });
     results.push({ candidate: c, pipeline });
@@ -245,8 +269,8 @@ async function main(): Promise<void> {
       totalWorkerCalls++;
       totalWorkerDurationMs += worker.durationMs;
 
-      if (worker.durationMs > SLOW_CALL_WARN_MS) {
-        process.stdout.write(`⚠${worker.durationMs}ms `);
+      if (!VERBOSE && worker.durationMs > SLOW_CALL_WARN_MS) {
+        process.stdout.write(`\u26A0${worker.durationMs}ms `);
       }
 
       if (worker.status === "success") {
@@ -269,14 +293,32 @@ async function main(): Promise<void> {
     }
 
     const runningCost = computeCost(totalPromptTokens, totalCompletionTokens);
-    console.log(
-      `${pipeline.finalDecision.toUpperCase().padEnd(5)} ` +
-        `h=${pipeline.workers.haruspex.score.toFixed(2)} ` +
-        `a=${pipeline.workers.auspex.score.toFixed(2)} ` +
-        `c=${pipeline.workers.chronos.score.toFixed(2)} ` +
-        `[${pipeline.totalDurationMs}ms] ` +
-        `$${runningCost.toFixed(4)}`,
-    );
+
+    if (VERBOSE) {
+      const decision = pipeline.finalDecision.toUpperCase();
+      const outcome = c.outcome.classification;
+      const correct = (decision === "FIRE" && (outcome === "hit" || outcome === "good"))
+        || (decision === "SKIP" && (outcome === "loss" || outcome === "rug"))
+        ? "correct" : "missed";
+
+      console.log(`  Haruspex: ${pipeline.workers.haruspex.score.toFixed(2)} — "${pipeline.workers.haruspex.reasoning}"`);
+      console.log(`  Auspex:   ${pipeline.workers.auspex.score.toFixed(2)} — "${pipeline.workers.auspex.reasoning}"`);
+      console.log(`  Chronos:  ${pipeline.workers.chronos.score.toFixed(2)} — "${pipeline.workers.chronos.reasoning}"`);
+      console.log();
+      console.log(`  Decision: ${decision}  (Fas:${pipeline.fas.decision}, Nefas:${pipeline.nefas.decision})`);
+      console.log(`  Outcome:  ${outcome}  <- ${correct}`);
+      console.log(`  Cost:     $${runningCost.toFixed(4)}`);
+      console.log();
+    } else {
+      console.log(
+        `${pipeline.finalDecision.toUpperCase().padEnd(5)} ` +
+          `h=${pipeline.workers.haruspex.score.toFixed(2)} ` +
+          `a=${pipeline.workers.auspex.score.toFixed(2)} ` +
+          `c=${pipeline.workers.chronos.score.toFixed(2)} ` +
+          `[${pipeline.totalDurationMs}ms] ` +
+          `$${runningCost.toFixed(4)}`,
+      );
+    }
 
     // HARD STOPS
     if (runningCost > COST_CEILING) {
