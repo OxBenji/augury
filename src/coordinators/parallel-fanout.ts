@@ -30,6 +30,12 @@ import {
   DEFAULT_MODEL as OPENROUTER_DEFAULT_MODEL,
 } from "../agents/real-openrouter-worker.js";
 import {
+  callCoordinator,
+  type CoordinatorResult,
+  type WorkerReadings,
+  DEFAULT_COORDINATOR_MODEL,
+} from "../agents/real-openrouter-coordinator.js";
+import {
   runFasMock,
   runNefasMock,
   DEFAULT_WEIGHTS,
@@ -460,6 +466,113 @@ export async function runPipelineOpenRouter(
       haruspex.usage.completion_tokens +
       auspex.usage.completion_tokens +
       chronos.usage.completion_tokens,
+  };
+
+  return {
+    consensus,
+    finalDecision,
+    model,
+    workers: { haruspex, auspex, chronos },
+    fas,
+    nefas,
+    totalUsage,
+    totalDurationMs: Math.round(performance.now() - start),
+  };
+}
+
+// ── Phase 2 OpenRouter pipeline (real Fas + real Nefas) ─────────────
+// Workers: OpenRouter API calls (same as Phase 1)
+// Fas/Nefas: REAL LLM coordinators with empirical priors
+
+export interface Phase2PipelineResult {
+  consensus: "fire" | "skip" | "split";
+  finalDecision: "fire" | "skip";
+  model: string;
+  workers: {
+    haruspex: OpenRouterWorkerResult;
+    auspex: OpenRouterWorkerResult;
+    chronos: OpenRouterWorkerResult;
+  };
+  fas: CoordinatorResult;
+  nefas: CoordinatorResult;
+  totalUsage: { prompt_tokens: number; completion_tokens: number };
+  totalDurationMs: number;
+}
+
+export async function runPipelineOpenRouterPhase2(
+  candidate: HistoricalCandidate,
+  options?: { model?: string; coordinatorModel?: string; timeoutMs?: number },
+): Promise<Phase2PipelineResult> {
+  const model = options?.model ?? OPENROUTER_DEFAULT_MODEL;
+  const coordinatorModel = options?.coordinatorModel ?? DEFAULT_COORDINATOR_MODEL;
+  const start = performance.now();
+
+  // Phase 1: OpenRouter workers in parallel
+  const [hSettled, aSettled, cSettled] = await Promise.allSettled([
+    callOpenRouterWorker("haruspex", candidate, { model, timeoutMs: options?.timeoutMs }),
+    callOpenRouterWorker("auspex", candidate, { model, timeoutMs: options?.timeoutMs }),
+    callOpenRouterWorker("chronos", candidate, { model, timeoutMs: options?.timeoutMs }),
+  ]);
+
+  const haruspex =
+    hSettled.status === "fulfilled"
+      ? hSettled.value
+      : fallbackOpenRouterResult("haruspex");
+  const auspex =
+    aSettled.status === "fulfilled"
+      ? aSettled.value
+      : fallbackOpenRouterResult("auspex");
+  const chronos =
+    cSettled.status === "fulfilled"
+      ? cSettled.value
+      : fallbackOpenRouterResult("chronos");
+
+  // Build worker readings for coordinators
+  const workerReadings: WorkerReadings = {
+    haruspex: { score: haruspex.score, reasoning: haruspex.reasoning, vetoes: haruspex.vetoes },
+    auspex: { score: auspex.score, reasoning: auspex.reasoning, vetoes: auspex.vetoes },
+    chronos: { score: chronos.score, reasoning: chronos.reasoning, vetoes: chronos.vetoes },
+  };
+
+  // Phase 2: Fas first, then Nefas sees Fas's argument
+  const fas = await callCoordinator("fas", candidate, workerReadings, undefined, {
+    model: coordinatorModel,
+    timeoutMs: options?.timeoutMs,
+  });
+
+  const nefas = await callCoordinator("nefas", candidate, workerReadings, fas.argument, {
+    model: coordinatorModel,
+    timeoutMs: options?.timeoutMs,
+  });
+
+  // Phase 3: Consensus — both must agree to fire
+  let consensus: "fire" | "skip" | "split";
+  let finalDecision: "fire" | "skip";
+
+  if (fas.decision === "fire" && nefas.decision === "fire") {
+    consensus = "fire";
+    finalDecision = "fire";
+  } else if (fas.decision === "skip" && nefas.decision === "skip") {
+    consensus = "skip";
+    finalDecision = "skip";
+  } else {
+    consensus = "split";
+    finalDecision = "skip";
+  }
+
+  const totalUsage = {
+    prompt_tokens:
+      haruspex.usage.prompt_tokens +
+      auspex.usage.prompt_tokens +
+      chronos.usage.prompt_tokens +
+      fas.usage.prompt_tokens +
+      nefas.usage.prompt_tokens,
+    completion_tokens:
+      haruspex.usage.completion_tokens +
+      auspex.usage.completion_tokens +
+      chronos.usage.completion_tokens +
+      fas.usage.completion_tokens +
+      nefas.usage.completion_tokens,
   };
 
   return {
