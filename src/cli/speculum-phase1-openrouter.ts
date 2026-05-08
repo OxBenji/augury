@@ -236,16 +236,21 @@ async function main(): Promise<void> {
         c.features.has_twitter && "twitter",
         c.features.has_website && "website",
       ].filter(Boolean);
+      const f = c.features;
 
       console.log(divider);
       console.log(`[${i + 1}/${picks.length}] ${c.symbol} · outcome=${c.outcome.classification}`);
       console.log(divider);
-      console.log(`  holders:    ${c.features.top10_holder_pct}%`);
-      console.log(`  buys 5m:    ${c.features.buys_5m}`);
-      console.log(`  sells 5m:   ${c.features.sells_5m}`);
-      console.log(`  liquidity:  $${c.features.liquidity_usd.toLocaleString()}`);
-      console.log(`  deployer:   ${c.features.pair_age_minutes} min old`);
+      console.log(`  mcap:       $${f.market_cap.toLocaleString()}`);
+      console.log(`  liquidity:  $${f.liquidity_usd.toLocaleString()}${f.is_graduated ? "" : " (pre-grad)"}`);
+      console.log(`  buys 5m:    ${f.buys_5m}  |  sells 5m: ${f.sells_5m}`);
+      console.log(`  vol 5m:     $${f.volume_5m.toLocaleString()}  |  vol 1h: $${f.volume_1h.toLocaleString()}`);
+      console.log(`  chg 5m:     ${f.change_5m}%  |  chg 1h: ${f.change_1h}%`);
+      console.log(`  age:        ${Math.round(f.pair_age_minutes)} min`);
       console.log(`  social:     ${socials.length > 0 ? socials.join(", ") : "none"}`);
+      console.log(`  score:      ${f.score}`);
+      if (f.red_flags.length > 0) console.log(`  red flags:  ${f.red_flags.join(" | ")}`);
+      if (f.green_flags.length > 0) console.log(`  green flags: ${f.green_flags.join(" | ")}`);
       console.log();
     } else {
       process.stdout.write(

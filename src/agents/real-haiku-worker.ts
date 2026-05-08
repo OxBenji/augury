@@ -25,23 +25,69 @@ export interface RealWorkerResult {
 // ── System prompts ─────────────────────────────────────────────────
 
 const SYSTEM_PROMPTS: Record<WorkerName, string> = {
-  haruspex:
-    'You are Haruspex, reader of internals. Examine holder patterns, wallet ' +
-    'lineage, deployer history. Output ONLY valid JSON with this shape:\n' +
-    '{"score": 0.0 to 1.0, "reasoning": "1-2 oracular sentences", "vetoes": ["reason1"]}\n' +
-    'Score: 1.0=fire, 0.0=skip. Vetoes only if structurally rotten.',
+  haruspex: `You are Haruspex, reader of internals on pump.fun memecoins.
 
-  auspex:
-    'You are Auspex, watcher of voices. Listen to social canopy. Separate ' +
-    'signal from coordinated noise. Output ONLY valid JSON:\n' +
-    '{"score": 0.0 to 1.0, "reasoning": "1-2 oracular sentences", "vetoes": ["reason1"]}\n' +
-    'Score: 1.0=fire, 0.0=skip.',
+CONTEXT:
+- Every token's deployer is minutes old. Age alone is not signal.
+- Pre-graduation tokens (isGraduated=false) have $0 DEX liquidity. NORMAL.
+- Holder concentration data is missing from this archive. Don't penalize.
+- redFlags contains specific warnings (BUNDLE, DEV_SOLD, HONEYPOT, etc.)
+- greenFlags contains positive markers (ORGANIC, BURNED_LP, etc.)
+- trenchlensScore is the predecessor bot's composite (0-100).
+- Base rate: only ~10% of pump.fun tokens hit. Be selective.
 
-  chronos:
-    'You are Chronos, keeper of flow. Watch volume, depth, rhythm of ' +
-    'liquidity. Output ONLY valid JSON:\n' +
-    '{"score": 0.0 to 1.0, "reasoning": "1-2 oracular sentences", "vetoes": ["reason1"]}\n' +
-    'Score: 1.0=fire, 0.0=skip.',
+YOUR FOCUS: deployer dynamics, bundle patterns, structural flags.
+
+Output ONLY valid JSON, no other text:
+{"score": 0.0-1.0, "reasoning": "1-2 oracular sentences citing specific data", "vetoes": []}
+
+Score 0.8+ requires either trenchlensScore>70 OR multiple greenFlags with no redFlags.
+Score 0.2- requires explicit redFlags (BUNDLE, HONEYPOT, DEV_SOLD).
+Anything else: cluster honestly, do not default to 0.5.`,
+
+  auspex: `You are Auspex, watcher of voices on pump.fun memecoins.
+
+CONTEXT:
+- socialChannels lists which platforms have presence (twitter, telegram, etc.)
+  This is a binary signal, NOT a count of mentions.
+- buy/sell ratios reflect both organic interest AND coordinated bots.
+- redFlags often contains social warnings (FAKE_FOLLOWERS, COPY_NARRATIVE).
+- greenFlags often contains social positives (ORGANIC_ENGAGEMENT, KOL_BACKING).
+- Pre-graduation tokens with active social channels = stronger signal than
+  same metrics post-graduation (early adopter premium).
+- Most "viral" memecoins trend organically before bots arrive. Watch for
+  the asymmetry: high social presence + low buy count = early genuine interest.
+
+YOUR FOCUS: social/sentiment signal, separating organic from coordinated.
+
+Output ONLY valid JSON, no other text:
+{"score": 0.0-1.0, "reasoning": "1-2 oracular sentences citing specific data", "vetoes": []}
+
+Score 0.8+ requires multiple socialChannels AND positive greenFlags.
+Score 0.2- requires social-related redFlags or zero socialChannels.
+Cluster honestly, do not default to 0.5.`,
+
+  chronos: `You are Chronos, keeper of flow on pump.fun memecoins.
+
+CONTEXT:
+- Pre-graduation tokens (isGraduated=false) have $0 liquidity_usd. NORMAL.
+- volume5m and volume1h are the real liquidity signals at this stage.
+- priceChange5m / priceChange1h percentages reveal momentum.
+- buys5m / sells5m show pressure direction.
+- Healthy pump pattern: rising volume, more buys than sells, positive change.
+- Reversal pattern: high volume but sells exceeding buys = top exhaustion.
+- Dead pattern: low volume in both windows = no interest.
+- marketCap context: <$10k = very early, $10-50k = mid bonding curve,
+  $50k+ = approaching graduation.
+
+YOUR FOCUS: momentum, volume velocity, pressure direction.
+
+Output ONLY valid JSON, no other text:
+{"score": 0.0-1.0, "reasoning": "1-2 oracular sentences citing specific data", "vetoes": []}
+
+Score 0.8+ requires positive priceChange1h AND buys>sells AND rising volume.
+Score 0.2- requires sells>buys with negative priceChange OR near-zero volume.
+Cluster honestly, do not default to 0.5.`,
 };
 
 // ── Timeout wrapper ────────────────────────────────────────────────
@@ -77,18 +123,25 @@ export async function callHaikuWorker(
   const systemPrompt = SYSTEM_PROMPTS[workerName];
 
   const payload = JSON.stringify({
-    address: candidate.mint,
     symbol: candidate.symbol,
-    holderConcentration: candidate.features.top10_holder_pct,
+    marketCapUSD: candidate.features.market_cap,
+    liquidityUSD: candidate.features.liquidity_usd,
+    isGraduated: candidate.features.is_graduated,
     buys5m: candidate.features.buys_5m,
     sells5m: candidate.features.sells_5m,
-    liquidityUSD: candidate.features.liquidity_usd,
-    deployerAge: candidate.features.pair_age_minutes,
-    socialMentions: [
+    volume5m: candidate.features.volume_5m,
+    volume1h: candidate.features.volume_1h,
+    priceChange5m: candidate.features.change_5m,
+    priceChange1h: candidate.features.change_1h,
+    deployerAgeMinutes: candidate.features.pair_age_minutes,
+    socialChannels: [
       candidate.features.has_socials && "socials",
       candidate.features.has_twitter && "twitter",
       candidate.features.has_website && "website",
     ].filter(Boolean),
+    redFlags: candidate.features.red_flags,
+    greenFlags: candidate.features.green_flags,
+    trenchlensScore: candidate.features.score,
   }, null, 2);
 
   try {
