@@ -12,11 +12,13 @@
     "speculum:replay": "bun run src/cli/speculum.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0",
+    "@electric-sql/pglite": "^0.2.0",
     "@elizaos/core": "1.7.2-beta.0",
     "@elizaos/plugin-anthropic": "^1.5.12",
-    "@electric-sql/pglite": "^0.2.0",
-    "pg": "^8.13.0",
     "dotenv": "^16.4.0",
+    "openai": "^6.36.0",
+    "pg": "^8.13.0",
     "zod": "^3.23.0"
   },
   "devDependencies": {

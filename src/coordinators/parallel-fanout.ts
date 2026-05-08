@@ -19,6 +19,23 @@ import type {
   SwarmBus,
 } from "../swarm/bus.js";
 import type { WeightVector } from "../agents/sibyl/tuner.js";
+import type { HistoricalCandidate } from "../db/trenchlens-bridge.js";
+import {
+  callHaikuWorker,
+  type RealWorkerResult,
+} from "../agents/real-haiku-worker.js";
+import {
+  callOpenRouterWorker,
+  type OpenRouterWorkerResult,
+  DEFAULT_MODEL as OPENROUTER_DEFAULT_MODEL,
+} from "../agents/real-openrouter-worker.js";
+import {
+  runFasMock,
+  runNefasMock,
+  DEFAULT_WEIGHTS,
+  type MockWorkerReading,
+  type MockVerdict,
+} from "../agents/mock-coordinators.js";
 
 // ── Configuration ──────────────────────────────────────────────────
 
@@ -240,6 +257,221 @@ export async function runPipeline(
   }
 
   return result;
+}
+
+// ── Real Haiku pipeline (Phase 1 smoke test) ──────────────────────
+// Workers: real Haiku 4.5 API calls
+// Fas/Nefas: MOCK (stay deterministic for Phase 1)
+
+export interface RealHaikuPipelineResult {
+  consensus: "fire" | "skip" | "split";
+  finalDecision: "fire" | "skip";
+  workers: {
+    haruspex: RealWorkerResult;
+    auspex: RealWorkerResult;
+    chronos: RealWorkerResult;
+  };
+  fas: MockVerdict;
+  nefas: MockVerdict;
+  totalUsage: { input_tokens: number; output_tokens: number };
+  totalDurationMs: number;
+}
+
+function fallbackWorkerResult(name: string): RealWorkerResult {
+  return {
+    score: 0,
+    reasoning: `${name} promise rejected`,
+    vetoes: ["promise_rejected"],
+    usage: { input_tokens: 0, output_tokens: 0 },
+    durationMs: 0,
+    status: "error",
+  };
+}
+
+export async function runPipelineRealHaiku(
+  candidate: HistoricalCandidate,
+  weights?: WeightVector,
+): Promise<RealHaikuPipelineResult> {
+  const w = weights ?? DEFAULT_WEIGHTS;
+  const start = performance.now();
+
+  // Phase 1: Real Haiku workers in parallel
+  const [hSettled, aSettled, cSettled] = await Promise.allSettled([
+    callHaikuWorker("haruspex", candidate),
+    callHaikuWorker("auspex", candidate),
+    callHaikuWorker("chronos", candidate),
+  ]);
+
+  const haruspex =
+    hSettled.status === "fulfilled"
+      ? hSettled.value
+      : fallbackWorkerResult("haruspex");
+  const auspex =
+    aSettled.status === "fulfilled"
+      ? aSettled.value
+      : fallbackWorkerResult("auspex");
+  const chronos =
+    cSettled.status === "fulfilled"
+      ? cSettled.value
+      : fallbackWorkerResult("chronos");
+
+  // Map real scores → MockWorkerReading for Fas/Nefas
+  const workerReadings: MockWorkerReading[] = [
+    { worker: "haruspex", composite: haruspex.score },
+    { worker: "auspex", composite: auspex.score },
+    { worker: "chronos", composite: chronos.score },
+  ];
+
+  // Phase 2: Mock Fas/Nefas (staying mock for Phase 1)
+  const [fas, nefas] = await Promise.all([
+    runFasMock(candidate, workerReadings, w),
+    runNefasMock(candidate, workerReadings, w),
+  ]);
+
+  // Phase 3: Consensus — both must agree to fire
+  let consensus: "fire" | "skip" | "split";
+  let finalDecision: "fire" | "skip";
+
+  if (fas.decision === "fire" && nefas.decision === "fire") {
+    consensus = "fire";
+    finalDecision = "fire";
+  } else if (fas.decision === "skip" && nefas.decision === "skip") {
+    consensus = "skip";
+    finalDecision = "skip";
+  } else {
+    consensus = "split";
+    finalDecision = "skip";
+  }
+
+  const totalUsage = {
+    input_tokens:
+      haruspex.usage.input_tokens +
+      auspex.usage.input_tokens +
+      chronos.usage.input_tokens,
+    output_tokens:
+      haruspex.usage.output_tokens +
+      auspex.usage.output_tokens +
+      chronos.usage.output_tokens,
+  };
+
+  return {
+    consensus,
+    finalDecision,
+    workers: { haruspex, auspex, chronos },
+    fas,
+    nefas,
+    totalUsage,
+    totalDurationMs: Math.round(performance.now() - start),
+  };
+}
+
+// ── OpenRouter pipeline (Phase 1 OpenRouter smoke test) ─────────────
+// Workers: OpenRouter API calls (configurable model)
+// Fas/Nefas: MOCK (stay deterministic for Phase 1)
+
+export interface OpenRouterPipelineResult {
+  consensus: "fire" | "skip" | "split";
+  finalDecision: "fire" | "skip";
+  model: string;
+  workers: {
+    haruspex: OpenRouterWorkerResult;
+    auspex: OpenRouterWorkerResult;
+    chronos: OpenRouterWorkerResult;
+  };
+  fas: MockVerdict;
+  nefas: MockVerdict;
+  totalUsage: { prompt_tokens: number; completion_tokens: number };
+  totalDurationMs: number;
+}
+
+function fallbackOpenRouterResult(name: string): OpenRouterWorkerResult {
+  return {
+    score: 0,
+    reasoning: `${name} promise rejected`,
+    vetoes: ["promise_rejected"],
+    usage: { prompt_tokens: 0, completion_tokens: 0 },
+    durationMs: 0,
+    status: "error",
+  };
+}
+
+export async function runPipelineOpenRouter(
+  candidate: HistoricalCandidate,
+  options?: { model?: string; weights?: WeightVector; timeoutMs?: number },
+): Promise<OpenRouterPipelineResult> {
+  const w = options?.weights ?? DEFAULT_WEIGHTS;
+  const model = options?.model ?? OPENROUTER_DEFAULT_MODEL;
+  const start = performance.now();
+
+  // Phase 1: OpenRouter workers in parallel (paid tier — no rate limit concern)
+  const [hSettled, aSettled, cSettled] = await Promise.allSettled([
+    callOpenRouterWorker("haruspex", candidate, { model, timeoutMs: options?.timeoutMs }),
+    callOpenRouterWorker("auspex", candidate, { model, timeoutMs: options?.timeoutMs }),
+    callOpenRouterWorker("chronos", candidate, { model, timeoutMs: options?.timeoutMs }),
+  ]);
+
+  const haruspex =
+    hSettled.status === "fulfilled"
+      ? hSettled.value
+      : fallbackOpenRouterResult("haruspex");
+  const auspex =
+    aSettled.status === "fulfilled"
+      ? aSettled.value
+      : fallbackOpenRouterResult("auspex");
+  const chronos =
+    cSettled.status === "fulfilled"
+      ? cSettled.value
+      : fallbackOpenRouterResult("chronos");
+
+  // Map scores → MockWorkerReading for Fas/Nefas
+  const workerReadings: MockWorkerReading[] = [
+    { worker: "haruspex", composite: haruspex.score },
+    { worker: "auspex", composite: auspex.score },
+    { worker: "chronos", composite: chronos.score },
+  ];
+
+  // Phase 2: Mock Fas/Nefas (staying mock for Phase 1)
+  const [fas, nefas] = await Promise.all([
+    runFasMock(candidate, workerReadings, w),
+    runNefasMock(candidate, workerReadings, w),
+  ]);
+
+  // Phase 3: Consensus — both must agree to fire
+  let consensus: "fire" | "skip" | "split";
+  let finalDecision: "fire" | "skip";
+
+  if (fas.decision === "fire" && nefas.decision === "fire") {
+    consensus = "fire";
+    finalDecision = "fire";
+  } else if (fas.decision === "skip" && nefas.decision === "skip") {
+    consensus = "skip";
+    finalDecision = "skip";
+  } else {
+    consensus = "split";
+    finalDecision = "skip";
+  }
+
+  const totalUsage = {
+    prompt_tokens:
+      haruspex.usage.prompt_tokens +
+      auspex.usage.prompt_tokens +
+      chronos.usage.prompt_tokens,
+    completion_tokens:
+      haruspex.usage.completion_tokens +
+      auspex.usage.completion_tokens +
+      chronos.usage.completion_tokens,
+  };
+
+  return {
+    consensus,
+    finalDecision,
+    model,
+    workers: { haruspex, auspex, chronos },
+    fas,
+    nefas,
+    totalUsage,
+    totalDurationMs: Math.round(performance.now() - start),
+  };
 }
 
 export {
