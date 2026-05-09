@@ -99,6 +99,12 @@ export default function Home() {
           >
             View on GitHub
           </a>
+          <a
+            href="/observatory"
+            className="inline-block mt-4 py-2 px-5 border border-basalt rounded font-cinzel text-[13px] tracking-[0.15em] uppercase text-patina hover:border-patina/60 hover:text-bone hover:bg-basalt/50 transition-all duration-200"
+          >
+            Observatory &#9656;
+          </a>
         </div>
       </section>
 

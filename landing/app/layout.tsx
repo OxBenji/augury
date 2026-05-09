@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -32,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${GeistSans.variable}`}>
+    <html lang="en" className={`${cinzel.variable} ${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-geist antialiased">{children}</body>
     </html>
   );

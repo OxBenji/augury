@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         cinzel: ["var(--font-cinzel)", "serif"],
         geist: ["var(--font-geist)", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
       },
     },
   },

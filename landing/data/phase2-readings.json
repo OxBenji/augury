@@ -1,0 +1,1309 @@
+[
+  {
+    "candidate": {
+      "symbol": "XSLOP",
+      "outcome": "hit",
+      "marketCap": 23735.03,
+      "buys5m": 131,
+      "sells5m": 63,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 43,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Already +796% in 1h — high entry risk",
+        "BUNDLE: 68% of early buys are bundled — fake demand from 0 wallets"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 131(5m) 968(1h)",
+        "Fresh: 43m old",
+        "Has socials",
+        "Strong time window (07 UTC) — 40%+ hit rate",
+        "Has X/Twitter: https://x.com/ianmiles"
+      ],
+      "trenchlensScore": 32,
+      "priceChange5m": 52.8,
+      "priceChange1h": 796
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.1,
+        "reasoning": "The presence of explicit redFlags, particularly BUNDLE indicating potential artificial demand, significantly diminishes the viability of this token. Despite some greenFlags, the overall risk is too high with a trenchlensScore of only 32."
+      },
+      "auspex": {
+        "score": 0.2,
+        "reasoning": "This token exhibits redFlags, including a warning about high entry risk due to extreme price movement and fake demand signals. Despite having active socialChannels, the redFlags heavily outweigh the positives, indicating a lack of genuine organic engagement."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "With a priceChange1h of 796% combined with buys5m significantly exceeding sells5m (131 vs 63), the token is showing strong momentum and demand, supported by rising volume (71114.84)."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The candidate has multiple red flags present, particularly a BUNDLE flag indicating artificial demand, alongside a high entry risk due to excessive price movement. These factors, combined with low worker scores and a lack of genuine engagement, warrant a hard skip despite some positive momentum.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of a BUNDLE flag indicating artificial demand, along with a significant price increase in a short timeframe, suggests a high entry risk that cannot be overlooked. These factors outweigh the positive indicators and demonstrate that the token's viability is significantly diminished.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "hit",
+      "correct": false
+    },
+    "cost": "$0.0008"
+  },
+  {
+    "candidate": {
+      "symbol": "POSITIONS",
+      "outcome": "hit",
+      "marketCap": 96190,
+      "buys5m": 304,
+      "sells5m": 237,
+      "liquidity": 23938.32,
+      "isGraduated": true,
+      "deployerAge": 32,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Vol/Liq ratio too high — wash trading?",
+        "Weak narrative appeal with generic ticker name",
+        "Vol/Liq ratio of 16.7x indicates artificial volume inflation"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "MCap sweet spot: $96,190 (best hit rate band)",
+        "Strong buy flow: 304(5m) 5010(1h)",
+        "Good liq depth: 25%",
+        "Fresh: 32m old",
+        "Has socials",
+        "Strong time window (10 UTC) — 40%+ hit rate",
+        "🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest)",
+        "Clean first slot — no coordinated launch buys",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/CoolBrandonD",
+        "Excellent buy/sell ratio of 1.31x shows genuine buyer interest",
+        "Strong 192% hourly growth with sustained momentum",
+        "Clean bundle metrics suggest organic rather than coordinated launch"
+      ],
+      "trenchlensScore": 40.88,
+      "priceChange5m": 13.68,
+      "priceChange1h": 192
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.3,
+        "reasoning": "Despite having positive indicators such as a strong buy flow and graduated DEX liquidity, the presence of multiple significant red flags—especially the high volume-to-liquidity ratio suggesting potential wash trading—merits a cautious score."
+      },
+      "auspex": {
+        "score": 0.2,
+        "reasoning": "Despite having social channels, the presence of multiple redFlags indicates potential issues with market manipulation and a weak narrative. The disconnect between the high buy volume and the questionable wash trading signals a risk of artificial interest rather than genuine organic engagement."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "POSITIONS demonstrates strong momentum with a price change of 192% in the last hour, and a buy-sell ratio of 1.28, indicating positive pressure. The volume has risen significantly, with 399,878.58 in the past hour, suggesting robust interest and activity."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "Despite a strong momentum score from one worker, the presence of significant red flags, particularly regarding the volume-to-liquidity ratio indicating potential wash trading, raises serious concerns about the legitimacy of the trading activity. This indicates that the buy interest may not be organic, which is critical for long-term success.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The significant red flags regarding wash trading and a questionable volume-to-liquidity ratio cast doubt on the authenticity of the trading activity, posing a substantial risk. Despite some positive metrics, the risks outweigh the potential benefits, indicating a market manipulation concern that cannot be overlooked.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "hit",
+      "correct": false
+    },
+    "cost": "$0.0017"
+  },
+  {
+    "candidate": {
+      "symbol": "VC",
+      "outcome": "hit",
+      "marketCap": 18007.37,
+      "buys5m": 61,
+      "sells5m": 39,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Price dropping -16.2% on volume",
+        "Already +558% in 1h — buying top",
+        "Already +558% in 6h — extended",
+        "Friday — highest rug rate (60%% rug)"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 61(5m) 953(1h)",
+        "Fresh: 30m old",
+        "Has socials",
+        "Good time window (04-08 UTC) — 32%% hit rate",
+        "Clean first slot — no coordinated launch buys",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 36,
+      "priceChange5m": -16.2,
+      "priceChange1h": 558
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.1,
+        "reasoning": "The presence of multiple significant redFlags, including steep price drops and high risk associated with the day of the week, indicates strong potential for failure. Furthermore, the trenchlensScore of 36 suggests a weak investment signal."
+      },
+      "auspex": {
+        "score": 0.4,
+        "reasoning": "While VC has a presence on multiple social channels (socials, twitter) and indicates strong buying flow, the significant red flags including a steep price drop of -16.2% on volume and the historical context of high rug rates create major concerns about the sustainability of interest. The early signs of strong engagement are overshadowed by the negative price movements and risk factors."
+      },
+      "chronos": {
+        "score": 0.2,
+        "reasoning": "Despite the positive buying pressure with 61 buys against 39 sells, the negative price change of -16.2% in the last 5 minutes alongside extremely high price surge of +558% in 1 hour indicates a potential buy top scenario, suggesting exhaustion. The high volume does not reflect sustainable interest as indicated by the negative momentum, leading to a low score."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The candidate VC has multiple significant red flags, including a large price drop of -16.2% and high risk associated with the timing of the investment. With all three worker scores below 0.4, it poses a universal rejection scenario despite some positive buying pressure.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The candidate VC presents multiple significant red flags, including a steep price drop of -16.2% and a highly concerning day for investment with a 60% rug rate. Additionally, all three workers score below the accepted threshold, indicating a lack of strong consensus for a positive investment outcome.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "hit",
+      "correct": false
+    },
+    "cost": "$0.0025"
+  },
+  {
+    "candidate": {
+      "symbol": "LAIKA",
+      "outcome": "hit",
+      "marketCap": 92520,
+      "buys5m": 124,
+      "sells5m": 75,
+      "liquidity": 25584.24,
+      "isGraduated": true,
+      "deployerAge": 113,
+      "social": [
+        "socials",
+        "twitter",
+        "website"
+      ],
+      "redFlags": [],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "MCap sweet spot: $92,520 (best hit rate band)",
+        "Strong buy flow: 124(5m) 1795(1h)",
+        "Good liq depth: 28%",
+        "Fresh: 113m old",
+        "Gradual rise — organic",
+        "Has socials",
+        "Friday — strongest day (44%% hit, 16%% rug)",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/laika_dog_sol"
+      ],
+      "trenchlensScore": 43.92,
+      "priceChange5m": 2.07,
+      "priceChange1h": 72.77
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.6,
+        "reasoning": "Despite a trenchlensScore of 43.92, LAIKA benefits from multiple greenFlags such as having a graduated status, good liquidity depth, and strong buy flow, which indicate positive momentum. The lack of redFlags further enhances its profile, making it a token worth monitoring closely."
+      },
+      "auspex": {
+        "score": 0.9,
+        "reasoning": "LAIKA has multiple social channels including Twitter and a dedicated website, paired with several positive green flags indicating organic interest and a strong buy flow. The absence of red flags further reinforces its potential as a solid investment."
+      },
+      "chronos": {
+        "score": 1,
+        "reasoning": "With a price change of 72.77% over the last hour, strong buy flow (124 buys vs. 75 sells in the last 5 minutes), and rising volume (12048.38 in 5m and 149807.96 in 1h), LAIKA is showing robust momentum and pressure direction favoring buyers."
+      }
+    },
+    "fas": {
+      "decision": "fire",
+      "argument": "LAIKA holds a graduated status with zero red flags, supported by strong buy pressure and positive price momentum, making it a compelling investment opportunity. Additionally, the combined worker scores indicate a solid consensus for action.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "fire",
+      "argument": "All conditions for conceding are met: there are no near-veto flags, no worker has a veto, multiple workers scored significantly above 0.6, and recent buys surpass sells without active sell pressure. The data showcases robust buy momentum and strong indicators for potential growth.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "fire",
+      "decision": "FIRE",
+      "outcome": "hit",
+      "correct": true
+    },
+    "cost": "$0.0033"
+  },
+  {
+    "candidate": {
+      "symbol": "PEPEPUNCH",
+      "outcome": "good",
+      "marketCap": 66498,
+      "buys5m": 139,
+      "sells5m": 125,
+      "liquidity": 21067.86,
+      "isGraduated": true,
+      "deployerAge": 38,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Vol/Liq ratio too high — wash trading?",
+        "Thursday — worst hit rate (6.2%% hit)",
+        "Very low market cap at $66k makes it extremely volatile and risky"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 139(5m) 1496(1h)",
+        "Good liq depth: 32%",
+        "Fresh: 38m old",
+        "Recent pump.fun graduate (5-60m) — momentum window",
+        "Gradual rise — organic",
+        "Has socials",
+        "Good time window (04-08 UTC) — 32%% hit rate",
+        "Clean first slot — no coordinated launch buys",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/i",
+        "1.27x buy/sell ratio shows genuine buying interest",
+        "Graduated during optimal momentum window (5-60m post pump.fun)"
+      ],
+      "trenchlensScore": 42.12,
+      "priceChange5m": 29.46,
+      "priceChange1h": 79.74
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "Despite a high buy/sell ratio and the benefit of being graduated, the significant red flags regarding volatility due to low market cap and the possibility of wash trading raise concerns. The trenchlensScore of 42.12 also indicates underlying weakness."
+      },
+      "auspex": {
+        "score": 0.6,
+        "reasoning": "PEPEPUNCH has multiple social channels and numerous positive greenFlags indicating genuine interest, but the presence of significant redFlags, including potential wash trading and volatility due to low market cap, dampens the overall sentiment. The scoring reflects a mix of organic engagement and coordinated activity."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "The priceChange1h is significantly positive at 79.74%, with buys (139) exceeding sells (125), supported by a strong volume of 248398.33 in the last hour indicating rising interest and momentum."
+      }
+    },
+    "fas": {
+      "decision": "fire",
+      "argument": "PEPEPUNCH has graduated with zero near-veto flags and multiple positive indicators such as strong buy flow and high price momentum, leading to a highly favorable firing signal despite some concerns.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "Despite the positive indicators, significant red flags regarding wash trading and the very low market cap increase the risk of volatility, which cannot be overlooked. The worker scores are split, with one worker offering a low score, indicating uncertainty in the data.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "split",
+      "decision": "SKIP",
+      "outcome": "good",
+      "correct": false
+    },
+    "cost": "$0.0042"
+  },
+  {
+    "candidate": {
+      "symbol": "10%",
+      "outcome": "good",
+      "marketCap": 15700.42,
+      "buys5m": 15,
+      "sells5m": 13,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 131,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Weak B/S ratio: 1.2x"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 15(5m) 162(1h)",
+        "Mature: 131m — lowest rug rate (14%)",
+        "Has socials",
+        "Strong time window (10 UTC) — 40%+ hit rate",
+        "🔥 HIGH CONVICTION — great hour + strong score (41%% hit rate in backtest)",
+        "Clean first slot — no coordinated launch buys",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 43,
+      "priceChange5m": 8.8,
+      "priceChange1h": 229
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.6,
+        "reasoning": "Despite a low trenchlensScore of 43, the positive market dynamics indicated by multiple greenFlags such as strong buy flow and favorable timing patterns suggest potential. However, the presence of a redFlag related to the weak buy/sell ratio indicates caution."
+      },
+      "auspex": {
+        "score": 0.9,
+        "reasoning": "The token has multiple social channels (socials, twitter) and several positive greenFlags indicating strong interest and engagement (e.g., 'Strong buy flow' and 'Has socials'). The weak buy/sell ratio is mitigated by the strong age and low rug rate, indicating organic interest."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "The positive priceChange1h of 229% coupled with more buys (15) than sells (13) and rising volume (from 1496.26 in 5m to 17995.96 in 1h) indicates strong momentum and positive pressure direction."
+      }
+    },
+    "fas": {
+      "decision": "fire",
+      "argument": "The candidate demonstrates strong positive momentum with two workers scoring above 0.6 and no near-veto flags present, alongside a favorable buy/sell ratio and significant price change. The absence of red flags and strong buy flow suggest a healthy trajectory for the token.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "While there are some positive indicators, the weak buy/sell ratio is a significant concern that introduces risk. Additionally, the low trenchlensScore suggests a lack of strong underlying support for the candidate, warranting caution in this decision.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "split",
+      "decision": "SKIP",
+      "outcome": "good",
+      "correct": false
+    },
+    "cost": "$0.0050"
+  },
+  {
+    "candidate": {
+      "symbol": "OpenClaw",
+      "outcome": "good",
+      "marketCap": 63524,
+      "buys5m": 219,
+      "sells5m": 156,
+      "liquidity": 97937.16,
+      "isGraduated": true,
+      "deployerAge": 118,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Vol/Liq ratio too high — wash trading?",
+        "BUNDLE: 3 buys in first slot — likely coordinated launch"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 219(5m) 2645(1h)",
+        "Good liq depth: 154%",
+        "Fresh: 118m old",
+        "Gradual rise — organic",
+        "Has socials",
+        "Monday — best day (31%% hit, 35%% rug)",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/OpenClawAi_SOL"
+      ],
+      "trenchlensScore": 48.22,
+      "priceChange5m": 5.77,
+      "priceChange1h": 16.74
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.3,
+        "reasoning": "Despite having several positive indicators such as being graduated and good liquidity depth, the presence of significant red flags, particularly related to high volume/liquidity ratio and bundled transactions indicating possible coordinated launch, suggests caution."
+      },
+      "auspex": {
+        "score": 0.3,
+        "reasoning": "Despite having multiple socialChannels, the presence of redFlags such as potential wash trading and a coordinated launch raises concerns about the authenticity of the generated interest. The high volume relative to liquidity also suggests possible manipulation, indicating that the buy/sell activity may not be entirely organic."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "With a market cap of $63,524, OpenClaw shows strong momentum with a price change of 16.74% over the past hour, along with more buys (219) than sells (156), and significant rising volume of 1,321,128.66 in the last hour indicating solid interest and activity."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of significant red flags, specifically the BUNDLE and high volume/liquidity ratio, indicates serious concerns about the authenticity of the buy/sell activity and possible manipulation. Despite one worker showing strong momentum, the overall situation is compromised by these near-veto flags, making it a hard skip.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of the BUNDLE flag and the high volume/liquidity ratio indicates serious risks and potential manipulation, overriding the positive signals from the strong momentum worker. Given these concerning red flags, a skip is warranted.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "good",
+      "correct": false
+    },
+    "cost": "$0.0058"
+  },
+  {
+    "candidate": {
+      "symbol": "7Dogs",
+      "outcome": "good",
+      "marketCap": 16150,
+      "buys5m": 36,
+      "sells5m": 28,
+      "liquidity": 10174.27,
+      "isGraduated": true,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter",
+        "website"
+      ],
+      "redFlags": [
+        "Poor time window (17 UTC) — 15.3% hit rate",
+        "Significant hourly decline of -56.6% suggests momentum fading",
+        "Low market cap of $16K makes token highly volatile"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 36(5m) 994(1h)",
+        "Healthy heat: 47% — active buying momentum",
+        "Good liq depth: 63%",
+        "Fresh: 30m old",
+        "Has socials",
+        "Monday — best day (31%% hit, 35%% rug)",
+        "Clean first slot — no coordinated launch buys",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/i",
+        "Buy/sell ratio of 1.39x shows net buying pressure",
+        "Clean bundle with only 11% coordination indicates organic interest"
+      ],
+      "trenchlensScore": 51.02,
+      "priceChange5m": 12.81,
+      "priceChange1h": -56.65
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "The presence of multiple greenFlags indicates positive momentum and interest, but the significant hourly price decline and low market cap raise concerns about sustainability. Additionally, the trenchlensScore of 51.02 does not meet the threshold for higher confidence."
+      },
+      "auspex": {
+        "score": 0.7,
+        "reasoning": "While '7Dogs' has multiple social channels, including Twitter, and exhibits strong buying flow, it also shows significant red flags such as a steep price decline and a low market cap, indicating potential volatility. The presence of organic interest is supported by a buy/sell ratio of 1.39x, suggesting net buying pressure."
+      },
+      "chronos": {
+        "score": 0.3,
+        "reasoning": "Despite having a strong buy flow and initial momentum as indicated by the high volume in the last hour, the significant price decline of -56.65% alongside sells exceeding buys presents a concerning reversal pattern. The current environment indicates fading interest, reinforced by the significant hourly decline."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The candidate '7Dogs' has multiple red flags, including a significant hourly price decline of -56.6% and a low market cap of $16K, raising concerns about sustainability and volatility. Additionally, with one worker below 0.4 and near-veto flags present, the overall assessment is unfavorable.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The candidate '7Dogs' exhibits several concerning factors, including a significant hourly price decline of -56.6% and red flags related to volatility due to its low market cap. With one worker scoring below 0.4 and the presence of near-veto flags, the risks outweigh the potential rewards.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "good",
+      "correct": false
+    },
+    "cost": "$0.0067"
+  },
+  {
+    "candidate": {
+      "symbol": "MTGA",
+      "outcome": "loss",
+      "marketCap": 6440.53,
+      "buys5m": 77,
+      "sells5m": 73,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 35,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Price dropping -38.2% on volume",
+        "Sell acceleration: 5m sells 2.9x above hourly rate"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 77(5m) 599(1h)",
+        "Volume accelerating",
+        "Fresh: 35m old",
+        "Has socials",
+        "Clean first slot — no coordinated launch buys",
+        "Has X/Twitter: https://x.com/AxTrades30"
+      ],
+      "trenchlensScore": 34,
+      "priceChange5m": -38.17,
+      "priceChange1h": 168
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "Despite several greenFlags indicating strong buy flow and social presence, the presence of redFlags related to price drop and sell acceleration raises concerns about potential sell pressure. The low trenchlensScore also suggests a lack of underlying strength."
+      },
+      "auspex": {
+        "score": 0.4,
+        "reasoning": "The presence of multiple socialChannels indicates some level of visibility, but the significant redFlags suggesting price dropping and sell acceleration overshadow the positives. The balance of buys to sells is also close, indicating mixed sentiment."
+      },
+      "chronos": {
+        "score": 0.4,
+        "reasoning": "Despite a strong volume of 25969.55 in the last hour and more buys (77) than sells (73) in the last 5 minutes, the significant price drop of -38.17% over 5 minutes indicates a reversal pattern due to heavy selling pressure. The combination of negative price change and red flags suggests caution despite the initial signs of momentum."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of significant red flags related to sharp price drops and sell acceleration strongly indicates potential sell pressure, overshadowing the positive indicators. Additionally, with all worker scores below 0.4, this suggests universal rejection of the candidate.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The significant red flags regarding price drop and sell acceleration indicate potential active dumping and sell pressure, which suggests a high likelihood of loss. Additionally, all workers scored below 0.4, reinforcing the overall negative sentiment towards this candidate.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "loss",
+      "correct": true
+    },
+    "cost": "$0.0075"
+  },
+  {
+    "candidate": {
+      "symbol": "PUMP",
+      "outcome": "loss",
+      "marketCap": 13757.76,
+      "buys5m": 81,
+      "sells5m": 60,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Price dropping -25.2% on volume",
+        "Tuesday — weak day (23%% hit, 31%% rug)"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 81(5m) 1290(1h)",
+        "Fresh: 30m old",
+        "Has socials",
+        "Clean first slot — no coordinated launch buys",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 43,
+      "priceChange5m": -25.23,
+      "priceChange1h": 310
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "Despite showing strong buy flow and having no red flags related to deployment tactics, the substantial price drop and the context of the day raise concerns about stability. The trenchlensScore indicates a lack of substantial backing."
+      },
+      "auspex": {
+        "score": 0.6,
+        "reasoning": "The presence on multiple social channels (socials and twitter) along with strong buy flow indicates growing organic interest. However, the significant price drop and the presence of red flags, particularly regarding price action and timing, mitigate the positive signals."
+      },
+      "chronos": {
+        "score": 0.6,
+        "reasoning": "Despite a significant price drop of -25.23% over 5 minutes, the momentum shifts positively with a high volume of $79578.44 and a notable 81 buys against 60 sells in the last 5 minutes. This signals buyer interest, albeit under a cautious upward price trend after the drop, suggesting potential but requiring further observation."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of multiple red flags, particularly the significant price drop and the weak day indicator contribute to concerns about stability. Despite some positive buy flow and a reasonably good score from workers, the overall negative signals outweigh these factors.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The significant price drop of -25.23% combined with the context of a weak trading day strongly indicates potential instability and active sell pressure, which suggests a reversal pattern. Additionally, the negative price change alongside selling pressures (sells > buys) justifies skipping this candidate despite some positive indicators.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "loss",
+      "correct": true
+    },
+    "cost": "$0.0083"
+  },
+  {
+    "candidate": {
+      "symbol": "GUDTRIP",
+      "outcome": "loss",
+      "marketCap": 6459.85,
+      "buys5m": 83,
+      "sells5m": 41,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter",
+        "website"
+      ],
+      "redFlags": [
+        "Tuesday — weak day (23%% hit, 31%% rug)",
+        "Zero liquidity creates immediate rug risk",
+        "Vague ticker lacks memorable meme appeal"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 83(5m) 1062(1h)",
+        "Fresh: 30m old",
+        "Has socials",
+        "Has X/Twitter: https://x.com/NTerrone72394",
+        "Clean bundle indicates organic launch"
+      ],
+      "trenchlensScore": 46,
+      "priceChange5m": 41.15,
+      "priceChange1h": -46.49
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "Despite having a clean bundle indicating an organic launch and a fresh deployer with a low rug rate, the presence of significant redFlags about zero liquidity and a weak day for deployments outweighs the positive indicators. The trenchlensScore of 46 further suggests limited potential."
+      },
+      "auspex": {
+        "score": 0.6,
+        "reasoning": "GUDTRIP has multiple socialChannels including Twitter and a website, along with strong buy flow indicating organic interest. However, the presence of significant redFlags such as zero liquidity and vague branding suggests a higher risk that dampens the overall score."
+      },
+      "chronos": {
+        "score": 0.4,
+        "reasoning": "Despite strong buy pressure (83 buys vs 41 sells) and high volume (4694.71 in 5m), the negative priceChange1h (-46.49) and high volume exhaustion suggest an impending downward trend."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The candidate has significant red flags including zero liquidity and a weak deployment day, which create a high risk for potential rug pulls. Although there is some positive buy pressure, the overall worker scores are low and do not meet the standards for firing.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of crucial red flags, such as zero liquidity and a weak deployment day, greatly increases the risk of rug pulls. Even though there is some positive buy pressure, the significant concerns raised by the workers dictate a cautious approach.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "loss",
+      "correct": true
+    },
+    "cost": "$0.0091"
+  },
+  {
+    "candidate": {
+      "symbol": "DanDan",
+      "outcome": "loss",
+      "marketCap": 11377.72,
+      "buys5m": 44,
+      "sells5m": 23,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter",
+        "website"
+      ],
+      "redFlags": [
+        "Already +313% in 1h — buying top"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 44(5m) 2084(1h)",
+        "Fresh: 30m old",
+        "Has socials",
+        "Clean first slot — no coordinated launch buys",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 71.85,
+      "priceChange5m": 52.56,
+      "priceChange1h": 313
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.9,
+        "reasoning": "With a trenchlensScore of 71.85 and multiple greenFlags indicating strong buy flow and active social presence, the potential for positive growth is high. No explicit redFlags detracting from the overall outlook further solidify its score."
+      },
+      "auspex": {
+        "score": 0.8,
+        "reasoning": "DanDan benefits from multiple social channels and several positive green flags such as strong buy flow and a clean initial buy slot, indicating healthy organic interest. The presence of red flags about potential price manipulation creates some caution, but overall signals point to a promising start."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "With a price change of 313% in the last hour and more buys (44) than sells (23), along with significant volume (2607.24 in 5m and 105009.52 in 1h), this token displays strong upward momentum. The market cap indicates it's at a mid bonding curve stage, further supporting potential growth."
+      }
+    },
+    "fas": {
+      "decision": "fire",
+      "argument": "DanDan exhibits strong buy pressure with significant momentum and an impressive trenchlens score. Two workers score above 0.8, indicating strong potential for growth, and there are no near-veto flags present, making it a solid candidate for investment.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "Despite the positive indicators, the red flag regarding a 313% price change in the last hour suggests a potential buying top, which can indicate a reversal pattern. This dynamic, combined with the relatively low market cap and zero liquidity, raises concerns about volatility and may lead to losses.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "split",
+      "decision": "SKIP",
+      "outcome": "loss",
+      "correct": true
+    },
+    "cost": "$0.0098"
+  },
+  {
+    "candidate": {
+      "symbol": "BEPE",
+      "outcome": "rug",
+      "marketCap": 69999,
+      "buys5m": 832,
+      "sells5m": 125,
+      "liquidity": 22778.19,
+      "isGraduated": true,
+      "deployerAge": 45,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Vol/Liq ratio too high — wash trading?",
+        "Worst time window (20 UTC) — 13-19% hit rate",
+        "Derivative name with no clear unique angle",
+        "Launch during 20 UTC window with only 13-19% historical success rate"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 832(5m) 10324(1h)",
+        "Healthy B/S: 4.4x",
+        "Healthy heat: 48% — active buying momentum",
+        "Good liq depth: 33%",
+        "Fresh: 45m old",
+        "Recent pump.fun graduate (5-60m) — momentum window",
+        "Gradual rise — organic",
+        "Has socials",
+        "Monday — best day (31%% hit, 35%% rug)",
+        "Clean first slot — no coordinated launch buys",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/cryptoworldfed",
+        "Recent Pump.fun graduate with momentum window",
+        "Clean bundle metrics indicate organic launch",
+        "Solid liquidity depth at 33% provides exit opportunities"
+      ],
+      "trenchlensScore": 51.62,
+      "priceChange5m": 88.46,
+      "priceChange1h": 52.97
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "While there are numerous greenFlags indicating positive buying momentum and a graduated status with real liquidity, the presence of multiple redFlags including high Vol/Liq ratio and poor time window suggest caution. The trenchlensScore of 51.62 further substantiates a moderate risk profile."
+      },
+      "auspex": {
+        "score": 0.6,
+        "reasoning": "BEPE has multiple socialChannels including 'socials' and 'twitter', indicating active social presence; however, it suffers from significant redFlags such as potential wash trading and a derivative name without a clear angle."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "The token BEPE shows strong momentum with a price change of 52.97% in the last hour and a buy volume of 832, significantly exceeding the sell volume of 125. Additionally, the volume in the last hour is substantial at 726,093.21, indicating strong interest in the token."
+      }
+    },
+    "fas": {
+      "decision": "fire",
+      "argument": "BEPE is a graduated memecoin with significant positive momentum and healthy buying pressure (over 4.4x buy/sell ratio). Despite some red flags, the strong performance metrics from chronos and multiple green flags indicate a promising opportunity.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of multiple red flags, particularly the high Vol/Liq ratio which raises concerns about wash trading, and the poor time window historically indicate a higher risk for this token. Furthermore, the trenchlensScore of 51.62 suggests moderation in confidence. This data supports a cautious approach despite some positive metrics.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "split",
+      "decision": "SKIP",
+      "outcome": "rug",
+      "correct": true
+    },
+    "cost": "$0.0107"
+  },
+  {
+    "candidate": {
+      "symbol": "JPL",
+      "outcome": "rug",
+      "marketCap": 28955,
+      "buys5m": 77,
+      "sells5m": 41,
+      "liquidity": 13381,
+      "isGraduated": true,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter",
+        "website"
+      ],
+      "redFlags": [
+        "Vol/Liq ratio too high — wash trading?"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 77(5m) 2136(1h)",
+        "Good liq depth: 46%",
+        "Fresh: 30m old",
+        "Has socials",
+        "Good time window (22 UTC) — 28-38% hit rate",
+        "Weekend — solid (29-30%% hit rate)",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 38.31,
+      "priceChange5m": 37.88,
+      "priceChange1h": -19.12
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "While the token has several greenFlags indicating positive indicators such as strong buy flow and good liquidity depth, the presence of a significant redFlag regarding a high Vol/Liq ratio raises concerns over potential wash trading, negatively impacting its overall viability."
+      },
+      "auspex": {
+        "score": 0.6,
+        "reasoning": "JPL has multiple active social channels, including 'twitter' and 'website', which suggest engagement potential. However, the presence of a redFlag indicating possible wash trading raises concerns about the reliability of the buy/sell ratios."
+      },
+      "chronos": {
+        "score": 0.4,
+        "reasoning": "Despite strong buying with 77 buys versus 41 sells in the last 5 minutes, the priceChange1h being negative at -19.12 indicates downward momentum and potential top exhaustion. The high volume does indicate some activity, but the negative price change and the risk of wash trading suggest caution."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of a significant red flag regarding a high Vol/Liq ratio raises concerns over potential wash trading, which impacts the overall viability of JPL. Additionally, the worker scores show a split with low scores in two cases, indicating a lack of consensus on its potential.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The significant red flag regarding a high Vol/Liq ratio suggests potential wash trading, which is a serious concern for the token's viability. Moreover, the worker scores reveal a split decision with two workers scoring below the threshold, reflecting uncertainty about its potential success.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "rug",
+      "correct": true
+    },
+    "cost": "$0.0115"
+  },
+  {
+    "candidate": {
+      "symbol": "SCAM",
+      "outcome": "rug",
+      "marketCap": 24167,
+      "buys5m": 22,
+      "sells5m": 18,
+      "liquidity": 12373.02,
+      "isGraduated": true,
+      "deployerAge": 105,
+      "social": [
+        "socials",
+        "twitter",
+        "website"
+      ],
+      "redFlags": [
+        "Price dropping -5.1% on volume",
+        "Friday — highest rug rate (60%% rug)"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 22(5m) 459(1h)",
+        "Healthy heat: 73% — active buying momentum",
+        "Good liq depth: 51%",
+        "Fresh: 105m old",
+        "Has socials",
+        "Good time window (04-08 UTC) — 32%% hit rate",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 45.89,
+      "priceChange5m": -5.14,
+      "priceChange1h": -47.07
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.6,
+        "reasoning": "Despite having a low trenchlensScore and redFlags related to price drop and rug rate, the token exhibits multiple greenFlags indicating a strong buy flow and healthy liquidity. Its graduated status with real liquidity pool adds further positive structure."
+      },
+      "auspex": {
+        "score": 0.6,
+        "reasoning": "The token has multiple active social channels, including Twitter, which suggests a presence but has a mix of redFlags and greenFlags. The negative price change and potential rug risk indicate cautious engagement, despite healthy buying momentum and liquidity."
+      },
+      "chronos": {
+        "score": 0.2,
+        "reasoning": "Despite a marketCap of $24,167 indicating early advancement, the priceChange1h is significantly negative at -47.07%, and the small volume with sells (18) exceeding buys (22) suggests potential top exhaustion. The overall market sentiment is poor due to dropping prices on increasing volume, leading to low confidence."
+      }
+    },
+    "fas": {
+      "decision": "fire",
+      "argument": "The project is graduated with no near-veto flags and the conditions point towards potential positive upside despite some red flags. The combination of strong buying momentum and healthy liquidity flow suggests an opportunity worth pursuing.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The candidate displays concerning red flags, particularly the significant -5.14% price change on volume and a potential rug risk due to the negative trend during a time known for high rug rates. These issues suggest active selling pressure despite showing some green flags, warranting a cautious approach.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "split",
+      "decision": "SKIP",
+      "outcome": "rug",
+      "correct": true
+    },
+    "cost": "$0.0123"
+  },
+  {
+    "candidate": {
+      "symbol": "Ox",
+      "outcome": "rug",
+      "marketCap": 14881.04,
+      "buys5m": 55,
+      "sells5m": 26,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 52,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Already +485% in 1h — buying top",
+        "Extreme heat: 200% — possible manipulation/wash"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 55(5m) 374(1h)",
+        "Volume accelerating",
+        "Fresh: 52m old",
+        "Has socials",
+        "Prime time window (08-12 UTC) — 42.5%% hit rate",
+        "Clean first slot — no coordinated launch buys",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 84.25,
+      "priceChange5m": 76.01,
+      "priceChange1h": 485
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.9,
+        "reasoning": "The token shows strong buy activity with a trenchlensScore of 84.25 and multiple greenFlags indicating organic growth and favorable timing, outweighing concerns about pump activity. The absence of explicit redFlags further supports its potential."
+      },
+      "auspex": {
+        "score": 0.4,
+        "reasoning": "Despite having multiple socialChannels and several positive greenFlags, the significant redFlags regarding price manipulation and potential buying top signal concern over organic interest. The rapid price increase and high volatility suggest speculative activity rather than genuine community engagement."
+      },
+      "chronos": {
+        "score": 0.9,
+        "reasoning": "The priceChange1h is a significant +485%, coupled with 55 buys surpassing 26 sells indicates strong upward momentum and buy pressure. Additionally, the volume is rising with a 1h volume of 25273.74, showing heightened interest."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of significant red flags, particularly regarding potential price manipulation and buying at the top, raises concerns about the sustainability of the current momentum. Although the workers show strong scores, the risks associated with the red flags cannot be overlooked.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The significant red flags regarding potential manipulation and buying at the top indicate a high risk of an unsustainable price increase. While there is strong buy pressure, these concerns suggest that the upward momentum may not be reliable.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "rug",
+      "correct": true
+    },
+    "cost": "$0.0131"
+  },
+  {
+    "candidate": {
+      "symbol": "elon",
+      "outcome": "neutral",
+      "marketCap": 34994.66,
+      "buys5m": 0,
+      "sells5m": 0,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 47,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Only 0 txns in 5m",
+        "Already +984% in 1h with fading volume — late entry",
+        "Tuesday — weak day (23%% hit, 31%% rug)",
+        "BUNDLE: 68% of early buys are bundled — fake demand from 0 wallets"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Fresh: 47m old",
+        "Has socials",
+        "Has X/Twitter: https://x.com/jnpayne"
+      ],
+      "trenchlensScore": 33,
+      "priceChange5m": 0,
+      "priceChange1h": 984
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.1,
+        "reasoning": "The presence of the BUNDLE red flag indicates potential manipulation with 68% of early buys being bundled, which points to artificial demand. Additionally, the transaction activity is non-existent in the last 5 minutes and a high price change combined with fading volume suggests a risky entry point."
+      },
+      "auspex": {
+        "score": 0.1,
+        "reasoning": "The presence of redFlags such as 'Only 0 txns in 5m' and 'BUNDLE: 68% of early buys are bundled — fake demand from 0 wallets' indicates a lack of genuine organic interest, despite having some social channels. The absence of any recent purchases further diminishes confidence in the token's sentiment."
+      },
+      "chronos": {
+        "score": 0.1,
+        "reasoning": "Despite a significant price change of 984% in the last hour, the lack of any transactions in the last 5 minutes indicates no active engagement, leading to a dead pattern. Moreover, the warning signs of late entry and fading volume suggest exhaustion with potential for a reversal."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of a BUNDLE flag indicates potential manipulation and fake demand, while zero transactions in the last 5 minutes and signs of a late entry with fading volume further amplify the risk. All workers scored below the fire threshold, reinforcing the decision to skip.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of the BUNDLE flag indicates potential manipulation with 68% of early buys being bundled, confirming that this is likely artificial demand. Additionally, the lack of transactions in the last 5 minutes and high price change with fading volume signal significant risk and a lack of genuine interest, leading to a strong case for skipping this opportunity.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "neutral",
+      "correct": false
+    },
+    "cost": "$0.0140"
+  },
+  {
+    "candidate": {
+      "symbol": "SELLECK",
+      "outcome": "neutral",
+      "marketCap": 10678.73,
+      "buys5m": 70,
+      "sells5m": 50,
+      "liquidity": 0,
+      "isGraduated": false,
+      "deployerAge": 30,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Price dropping -13.7% on volume"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 70(5m) 1088(1h)",
+        "Fresh: 30m old",
+        "Has socials",
+        "Strong time window (08 UTC) — 40%+ hit rate",
+        "Weekend — solid (29-30%% hit rate)",
+        "Has X/Twitter: https://x.com/i"
+      ],
+      "trenchlensScore": 34,
+      "priceChange5m": -13.67,
+      "priceChange1h": 234
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.6,
+        "reasoning": "Despite a low trenchlensScore of 34, the token has several positive indicators including strong buy flow and being 30 minutes old, suggesting potential despite a small price drop. However, the lack of liquidity and a specific red flag on price volatility temper the optimism."
+      },
+      "auspex": {
+        "score": 0.7,
+        "reasoning": "SELLECK has a strong presence on social channels (socials, twitter) along with several positive greenFlags indicating organic engagement and fresh interest. However, the significant price drop and redFlag related to volume alert to potential volatility, preventing a higher score."
+      },
+      "chronos": {
+        "score": 0.7,
+        "reasoning": "Despite a significant price change of 234% in the last hour and a strong buy flow of 70 buys against 50 sells in the last 5 minutes, the overall price drop of 13.67% in the last 5 minutes indicates momentum challenges. The rising volume across both windows supports ongoing interest but does not fully negate the negative price dynamics."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "SELLECK displays some positive indicators, such as good buy flow and social engagement, but the significant price drop and red flags around price volatility temper optimism. With 0.6 and 0.7 worker scores and a negative momentum observed, the lack of liquidity and the notable decline in price over recent periods mean it is not a safe fire candidate.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "There is a significant price drop of -13.67% along with a sell pressure in the recent timeframe (sells > buys), which signals a reversal pattern that indicates it is not a safe investment. The red flag regarding price volatility particularly highlights the risk at this moment.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "neutral",
+      "correct": false
+    },
+    "cost": "$0.0148"
+  },
+  {
+    "candidate": {
+      "symbol": "SOLAMA",
+      "outcome": "neutral",
+      "marketCap": 20598,
+      "buys5m": 2,
+      "sells5m": 1,
+      "liquidity": 5521.14,
+      "isGraduated": true,
+      "deployerAge": 169,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Only 3 txns in 5m",
+        "Already +1735% in 6h — extremely extended",
+        "Cold heat: 13% — dying momentum"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Good liq depth: 27%",
+        "Mature: 169m — lowest rug rate (14%)",
+        "Gradual rise — organic",
+        "Has socials",
+        "Friday — strongest day (44%% hit, 16%% rug)",
+        "Clean first slot — no coordinated launch buys",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/SOLAMAV2"
+      ],
+      "trenchlensScore": 41.27,
+      "priceChange5m": 1.02,
+      "priceChange1h": 62.53
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.5,
+        "reasoning": "The token has a trenchlensScore of 41.27, indicating weak metrics, combined with several redFlags suggesting concerning transaction patterns and price volatility. Additionally, while there are multiple greenFlags, the presence of redFlags prevents a higher score due to risk factors involved."
+      },
+      "auspex": {
+        "score": 0.4,
+        "reasoning": "SOLAMA has active social channels including Twitter, indicating some level of engagement. However, the presence of multiple redFlags such as a low transaction count and an extremely high price increase suggests coordinated activity rather than organic interest, dampening the overall score."
+      },
+      "chronos": {
+        "score": 0.4,
+        "reasoning": "Despite positive priceChange1h (62.53%) and more buys than sells (2 vs 1), the extremely high price increase (+1735% in 6h) and low transaction volume (only 3 txns in 5m) indicate potential top exhaustion and declining momentum."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "The presence of multiple red flags, including a very high price increase and low transaction volume, combined with the low worker scores below the required thresholds, indicates significant risk and potential for loss. Hence, it's safer to skip this candidate.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of multiple red flags, particularly the extremely high price increase and low transaction volumes, coupled with all three worker scores below 0.6, strongly indicates significant risk. Additionally, the vetoes from the worker Chronos further strengthen the case for skipping this candidate.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "neutral",
+      "correct": false
+    },
+    "cost": "$0.0156"
+  },
+  {
+    "candidate": {
+      "symbol": "KingJohnny",
+      "outcome": "neutral",
+      "marketCap": 9497,
+      "buys5m": 33,
+      "sells5m": 26,
+      "liquidity": 7501.64,
+      "isGraduated": true,
+      "deployerAge": 63,
+      "social": [
+        "socials",
+        "twitter"
+      ],
+      "redFlags": [
+        "Poor time window (18 UTC) — 15.3% hit rate",
+        "Massive -76% price drop in last hour despite buy pressure suggests large seller dumping",
+        "Generic king theme without clear differentiation or viral potential"
+      ],
+      "greenFlags": [
+        "30m+ age — past rug danger zone (28%% rug rate)",
+        "Strong buy flow: 33(5m) 1195(1h)",
+        "Healthy heat: 43% — active buying momentum",
+        "Good liq depth: 79%",
+        "Fresh: 63m old",
+        "Has socials",
+        "Clean first slot — no coordinated launch buys",
+        "Graduated to DEX — has real liquidity pool",
+        "Has X/Twitter: https://x.com/i",
+        "Buy/sell ratio of 1.27x shows some buyer conviction despite price decline"
+      ],
+      "trenchlensScore": 44.78,
+      "priceChange5m": 35.76,
+      "priceChange1h": -76.75
+    },
+    "workers": {
+      "haruspex": {
+        "score": 0.4,
+        "reasoning": "The token exhibits strong greenFlags indicating healthy liquidity depth and buy momentum, however, the presence of multiple redFlags such as a significant price drop and generic theme dilutes its positive assessment."
+      },
+      "auspex": {
+        "score": 0.3,
+        "reasoning": "While KingJohnny has a buy/sell ratio of 1.27x and multiple socialChannels, it suffers from significant redFlags including a massive 76% price drop and poor differentiation, suggesting a lack of organic interest. The generic branding and large seller dumping indicate that interest may not be sustainable."
+      },
+      "chronos": {
+        "score": 0.4,
+        "reasoning": "Despite the strong buy pressure (33 buys vs 26 sells) and significant volume in the last 5 minutes, the massive -76.75% price change over the past hour indicates a significant loss of momentum and suggests seller dominance. The market cap is still under $10k, indicating it's very early in its lifecycle, and overall health is questionable with warning signs."
+      }
+    },
+    "fas": {
+      "decision": "skip",
+      "argument": "Despite the presence of some favorable green flags, the multiple significant red flags, particularly the massive price drop and poor differentiation in branding, indicate a high risk of loss. The worker scores are too low and no fire conditions are met, necessitating a skip.",
+      "citedFlags": []
+    },
+    "nefas": {
+      "decision": "skip",
+      "argument": "The presence of significant red flags, particularly the -76% price drop alongside the low worker scores (none above 0.4), indicates a strong likelihood of loss. Additionally, the buying momentum is overshadowed by the selling pressure and poor differentiation, suggesting instability and lack of organic interest.",
+      "citedFlags": []
+    },
+    "verdict": {
+      "consensus": "skip",
+      "decision": "SKIP",
+      "outcome": "neutral",
+      "correct": false
+    },
+    "cost": "$0.0165"
+  }
+]
