@@ -358,7 +358,7 @@ export default function ObservatoryPage() {
                               [{worker.score.toFixed(2)}]
                             </span>
                           </p>
-                          <p className="pl-4 text-bone/85 text-[13px]">
+                          <p className="pl-4 text-bone/85 text-[13px] break-words max-w-full">
                             {worker.reasoning.slice(0, maxChars)}
                             {state.phase === "D" && i === state.workerIdx && maxChars < worker.reasoning.length && (
                               <span className="animate-pulse text-ash">&#9646;</span>
@@ -374,7 +374,7 @@ export default function ObservatoryPage() {
                 {state.phase >= "E" && state.phase !== "A" && state.phase !== "B" && state.phase !== "C" && state.phase !== "D" && (
                   <div className={`my-4 border-t border-basalt pt-4 ${isSplit ? "border-l-2 border-l-oxblood/60 pl-3" : ""}`}>
                     <p className="text-bone uppercase text-[13px] tracking-[0.05em] mb-1">&#9656; Fas argues</p>
-                    <p className={`pl-4 text-[13px] ${isSplit ? "text-patina" : "text-bone/85"}`}>
+                    <p className={`pl-4 text-[13px] break-words max-w-full ${isSplit ? "text-patina" : "text-bone/85"}`}>
                       {reading.fas.argument.slice(0, state.phase === "E" ? state.fasChars : 150)}
                       {state.phase === "E" && state.fasChars < reading.fas.argument.length && state.nefasChars === 0 && (
                         <span className="animate-pulse text-ash">&#9646;</span>
@@ -383,7 +383,7 @@ export default function ObservatoryPage() {
                     {(state.phase > "E" || state.fasChars >= Math.min(reading.fas.argument.length, 150)) && (
                       <>
                         <p className="text-bone uppercase text-[13px] tracking-[0.05em] mt-3 mb-1">&#9656; Nefas argues</p>
-                        <p className={`pl-4 text-[13px] ${isSplit ? "text-oxblood" : "text-bone/85"}`}>
+                        <p className={`pl-4 text-[13px] break-words max-w-full ${isSplit ? "text-oxblood" : "text-bone/85"}`}>
                           {reading.nefas.argument.slice(0, state.phase === "E" ? state.nefasChars : 150)}
                           {state.phase === "E" && state.nefasChars < reading.nefas.argument.length && (
                             <span className="animate-pulse text-ash">&#9646;</span>
