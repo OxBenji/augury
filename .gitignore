@@ -15,3 +15,4 @@ speculum-report-*.json
 speculum-phase1-*.json
 speculum-tuned*.txt
 /data/smart-wallets.json
+server/logs/
