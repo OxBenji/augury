@@ -4,5 +4,8 @@ nixPkgs = ["bun"]
 [phases.install]
 cmds = ["cd server && bun install"]
 
+[phases.build]
+cmds = ["echo 'no build step needed for Bun runtime'"]
+
 [start]
 cmd = "cd server && bun --preload ./src/env.ts src/index.ts"
