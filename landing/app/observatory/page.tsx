@@ -1,7 +1,8 @@
 "use client";
 
 import { useReducer, useEffect, useCallback, useRef, useState } from "react";
-import readings from "../../data/phase2-readings.json";
+import replayReadings from "../../data/phase2-readings.json";
+import { AuguryWebSocket, fetchRecentReadings, type AuguryReading, type WsStatus } from "../../lib/augury-ws";
 
 // ── Types ──────────────────────────────────────────────────────────
 
@@ -35,16 +36,14 @@ type Action =
   | { type: "typeNefasChar" }
   | { type: "showDecision" };
 
-const TOTAL = readings.length;
-
 function reducer(state: State, action: Action): State {
   switch (action.type) {
     case "setPhase":
       return { ...state, phase: action.phase, typedChars: 0, lineIdx: 0, workerIdx: 0, workerChars: 0, fasChars: 0, nefasChars: 0, showDecision: false };
     case "nextCandidate":
-      return { ...state, candidateIdx: (state.candidateIdx + 1) % TOTAL, phase: "A", typedChars: 0, lineIdx: 0, workerIdx: 0, workerChars: 0, fasChars: 0, nefasChars: 0, showDecision: false };
+      return { ...state, candidateIdx: state.candidateIdx + 1, phase: "A", typedChars: 0, lineIdx: 0, workerIdx: 0, workerChars: 0, fasChars: 0, nefasChars: 0, showDecision: false };
     case "prevCandidate":
-      return { ...state, candidateIdx: (state.candidateIdx - 1 + TOTAL) % TOTAL, phase: "A", typedChars: 0, lineIdx: 0, workerIdx: 0, workerChars: 0, fasChars: 0, nefasChars: 0, showDecision: false };
+      return { ...state, candidateIdx: Math.max(0, state.candidateIdx - 1), phase: "A", typedChars: 0, lineIdx: 0, workerIdx: 0, workerChars: 0, fasChars: 0, nefasChars: 0, showDecision: false };
     case "restart":
       return { ...state, candidateIdx: 0, phase: "A", typedChars: 0, lineIdx: 0, workerIdx: 0, workerChars: 0, fasChars: 0, nefasChars: 0, showDecision: false, paused: false };
     case "togglePause":
@@ -93,6 +92,27 @@ function fmt(n: number): string {
 
 // ── Component ──────────────────────────────────────────────────────
 
+// Normalize live reading to match replay shape
+function normalizeLiveReading(r: AuguryReading) {
+  return {
+    candidate: {
+      ...r.candidate,
+      outcome: "pending" as const,
+      social: [] as string[],
+    },
+    workers: r.workers,
+    fas: r.fas,
+    nefas: r.nefas,
+    verdict: {
+      consensus: r.verdict.consensus,
+      decision: r.verdict.decision,
+      outcome: "pending",
+      correct: false,
+    },
+    cost: `$${r.cost.toFixed(4)}`,
+  };
+}
+
 export default function ObservatoryPage() {
   const [state, dispatch] = useReducer(reducer, initial);
   const [elapsed, setElapsed] = useState(0);
@@ -100,14 +120,56 @@ export default function ObservatoryPage() {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const prefersReduced = useRef(false);
 
+  // Live mode state
+  const [mode, setMode] = useState<"replay" | "live">("replay");
+  const [liveReadings, setLiveReadings] = useState<ReturnType<typeof normalizeLiveReading>[]>([]);
+  const [wsStatus, setWsStatus] = useState<WsStatus>("disconnected");
+  const wsRef = useRef<AuguryWebSocket | null>(null);
+  const liveQueueRef = useRef<ReturnType<typeof normalizeLiveReading>[]>([]);
+
   useEffect(() => {
     prefersReduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }, []);
 
-  const reading = readings[state.candidateIdx];
-  const c = reading.candidate;
-  const w = reading.workers;
-  const isSplit = reading.fas.decision !== reading.nefas.decision;
+  // WebSocket lifecycle
+  useEffect(() => {
+    if (mode !== "live") return;
+    if (wsRef.current) return; // already connected
+
+    const ws = new AuguryWebSocket();
+    wsRef.current = ws;
+
+    ws.onStatusChange = (status) => setWsStatus(status);
+    ws.onMessage = (reading) => {
+      const normalized = normalizeLiveReading(reading);
+      setLiveReadings((prev) => {
+        const next = [...prev, normalized];
+        if (next.length > 20) next.shift();
+        return next;
+      });
+      liveQueueRef.current.push(normalized);
+    };
+
+    // Backfill recent readings
+    fetchRecentReadings(5).then((recent) => {
+      if (recent.length > 0) {
+        setLiveReadings(recent.map(normalizeLiveReading));
+      }
+    });
+
+    ws.connect();
+    return () => { ws.destroy(); wsRef.current = null; };
+  }, [mode]);
+
+  // Determine active readings source and current reading
+  const readings = mode === "replay" ? replayReadings : liveReadings;
+  const TOTAL = readings.length;
+  const safeIdx = TOTAL > 0 ? state.candidateIdx % TOTAL : 0;
+  const reading = TOTAL > 0 ? readings[safeIdx] : null;
+  // Safe: c and w are only accessed inside JSX branches where reading !== null
+  const c = reading?.candidate ?? { symbol: "", outcome: "pending", marketCap: 0, buys5m: 0, sells5m: 0, liquidity: 0, isGraduated: false, deployerAge: 0, social: [] as string[], redFlags: [] as string[], greenFlags: [] as string[], trenchlensScore: 0, priceChange5m: 0, priceChange1h: 0 };
+  const w = reading?.workers ?? { haruspex: { score: 0, reasoning: "" }, auspex: { score: 0, reasoning: "" }, chronos: { score: 0, reasoning: "" } };
+  const isSplit = reading ? reading.fas.decision !== reading.nefas.decision : false;
 
   // Session timer
   useEffect(() => {
@@ -129,6 +191,8 @@ export default function ObservatoryPage() {
     if (state.paused) return;
 
     const reduced = prefersReduced.current;
+
+    if (!reading) return; // No reading available yet (live mode, empty)
 
     switch (state.phase) {
       case "A": {
@@ -203,7 +267,14 @@ export default function ObservatoryPage() {
         break;
       }
       case "G": {
-        if (state.candidateIdx === TOTAL - 1) {
+        if (mode === "live") {
+          // In live mode, wait for next reading from queue
+          timerRef.current = setTimeout(() => {
+            if (liveQueueRef.current.length > 0) {
+              dispatch({ type: "nextCandidate" });
+            }
+          }, 2000);
+        } else if (safeIdx >= TOTAL - 1) {
           advancePhase("loop-end", 2000);
         } else {
           timerRef.current = setTimeout(() => dispatch({ type: "nextCandidate" }), 2000);
@@ -220,7 +291,7 @@ export default function ObservatoryPage() {
       if (intervalRef.current) clearInterval(intervalRef.current);
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [state.phase, state.paused, state.typedChars, state.lineIdx, state.workerIdx, state.workerChars, state.fasChars, state.nefasChars, state.showDecision, state.candidateIdx, c.symbol, w, reading.fas, reading.nefas, advancePhase]);
+  }, [state.phase, state.paused, state.typedChars, state.lineIdx, state.workerIdx, state.workerChars, state.fasChars, state.nefasChars, state.showDecision, state.candidateIdx, c.symbol, w, reading, advancePhase, mode, TOTAL, safeIdx]);
 
   // Data rows for Phase B
   const dataRows = [
@@ -242,7 +313,7 @@ export default function ObservatoryPage() {
   const mm = String(Math.floor(elapsed / 60)).padStart(2, "0");
   const ss = String(elapsed % 60).padStart(2, "0");
 
-  const fireCount = readings.filter(r => r.verdict.decision === "FIRE").length;
+  const fireCount = readings.filter((r: typeof readings[number]) => r.verdict.decision === "FIRE").length;
 
   return (
     <main className="min-h-screen bg-obsidian relative">
@@ -264,8 +335,42 @@ export default function ObservatoryPage() {
           <div className="flex-1 h-px bg-oxblood/30" />
         </div>
 
+        {/* Mode toggle */}
+        <div className="mt-6 flex items-center gap-2">
+          <button
+            onClick={() => { setMode("replay"); dispatch({ type: "restart" }); }}
+            className={`font-mono text-[11px] uppercase tracking-[0.1em] px-4 py-1.5 rounded transition-all duration-150 ${
+              mode === "replay" ? "bg-bone text-obsidian font-semibold" : "border border-basalt text-ash hover:border-patina hover:text-bone"
+            }`}
+          >
+            Replay
+          </button>
+          <button
+            onClick={() => setMode("live")}
+            className={`font-mono text-[11px] uppercase tracking-[0.1em] px-4 py-1.5 rounded transition-all duration-150 ${
+              mode === "live" ? "bg-bone text-obsidian font-semibold" : "border border-basalt text-ash hover:border-patina hover:text-bone"
+            }`}
+          >
+            Live
+          </button>
+          {mode === "live" && (
+            <span className="flex items-center gap-1.5 ml-2">
+              <span className={`w-2 h-2 rounded-full ${
+                wsStatus === "connected" ? "bg-green-500" :
+                wsStatus === "connecting" ? "bg-patina animate-pulse" :
+                "bg-red-500"
+              }`} />
+              <span className="font-mono text-[10px] text-ash">
+                {wsStatus === "connected" ? "live" :
+                 wsStatus === "connecting" ? "connecting\u2026" :
+                 "reconnecting\u2026"}
+              </span>
+            </span>
+          )}
+        </div>
+
         {/* Session bar */}
-        <div className="mt-8 w-full max-w-[1080px] flex items-center justify-between px-2">
+        <div className="mt-4 w-full max-w-[1080px] flex items-center justify-between px-2">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-green-500/80 animate-pulse" />
             <span className="font-mono text-[10px] text-ash uppercase tracking-[0.2em]">Session active</span>
@@ -286,13 +391,19 @@ export default function ObservatoryPage() {
               augur://observatory
             </span>
             <span className="font-mono text-[10px] text-ash uppercase tabular-nums">
-              Reading {String(state.candidateIdx + 1).padStart(2, "0")} / {TOTAL}
+              Reading {String(safeIdx + 1).padStart(2, "0")} / {TOTAL || "—"}
             </span>
           </div>
 
           {/* Terminal body */}
           <div className="p-6 md:p-8 min-h-[560px] font-mono text-sm leading-relaxed text-bone overflow-y-auto">
-            {state.phase === "loop-end" ? (
+            {!reading ? (
+              <div className="flex flex-col items-center justify-center h-[400px] gap-4">
+                <p className="text-ash text-sm">&rarr; awaiting first reading from the flock</p>
+                <p className="text-ash animate-pulse">&#9646;</p>
+                <p className="text-ash text-[11px]">live mode &middot; webhook listener active</p>
+              </div>
+            ) : state.phase === "loop-end" ? (
               <div className="flex flex-col items-center justify-center h-[400px] gap-4">
                 <p className="text-ash uppercase text-[11px] tracking-[0.1em]">&mdash;&mdash; cycle complete &mdash;&mdash;</p>
                 <p className="font-mono text-[10px] text-ash tabular-nums">
@@ -450,19 +561,30 @@ export default function ObservatoryPage() {
         {/* Progress bar */}
         <div className="mt-3 flex flex-col items-center gap-2">
           <div className="w-80 h-0.5 bg-basalt rounded overflow-hidden">
-            <div className="h-full bg-oxblood transition-all duration-300" style={{ width: `${((state.candidateIdx + 1) / TOTAL) * 100}%` }} />
+            <div className="h-full bg-oxblood transition-all duration-300" style={{ width: `${TOTAL > 0 ? ((safeIdx + 1) / TOTAL) * 100 : 0}%` }} />
           </div>
           <p className="font-mono text-[10px] text-ash">
-            candidate {String(state.candidateIdx + 1).padStart(2, "0")} / {TOTAL} &middot; phase 2 readings
+            candidate {String(safeIdx + 1).padStart(2, "0")} / {TOTAL} &middot; {mode === "live" ? "live readings" : "phase 2 readings"}
           </p>
         </div>
 
         {/* Footer */}
         <div className="mt-12 max-w-[680px] text-center space-y-0.5">
-          <p className="font-mono text-[11px] text-ash leading-relaxed">replaying historical phase 2 results</p>
-          <p className="font-mono text-[11px] text-ash leading-relaxed">20 stratified solana memecoin graduations</p>
-          <p className="font-mono text-[11px] text-ash leading-relaxed">gpt-4o-mini workers and coordinators via openrouter</p>
-          <p className="font-mono text-[11px] text-ash leading-relaxed">live mode shipping next</p>
+          {mode === "live" ? (
+            <>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">live readings from solana memecoin graduations</p>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">events from helius webhook &middot; pump.fun graduations filter</p>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">gpt-4o-mini workers and coordinators via openrouter</p>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">all readings hashed for verifiability (provenance shipping next)</p>
+            </>
+          ) : (
+            <>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">replaying historical phase 2 results</p>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">20 stratified solana memecoin graduations</p>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">gpt-4o-mini workers and coordinators via openrouter</p>
+              <p className="font-mono text-[11px] text-ash leading-relaxed">live mode now available &middot; toggle above</p>
+            </>
+          )}
         </div>
 
         <div className="mt-6 flex gap-3">
