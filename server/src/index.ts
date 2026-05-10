@@ -33,10 +33,11 @@ app.get("/readings", (c) => {
 
 // ── Server with WebSocket ──────────────────────────────────────────
 
-const PORT = parseInt(process.env.PORT || "8787");
+const PORT = parseInt(process.env.PORT || "8080");
 
 const server = Bun.serve({
   port: PORT,
+  hostname: "0.0.0.0",
   fetch(req, server) {
     const url = new URL(req.url);
 

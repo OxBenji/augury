@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["bun"]
+
+[phases.install]
+cmds = ["cd server && bun install"]
+
+[start]
+cmd = "cd server && bun --preload ./src/env.ts src/index.ts"

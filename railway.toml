@@ -2,7 +2,7 @@
 builder = "NIXPACKS"
 
 [deploy]
-startCommand = "bun --preload ./src/env.ts src/index.ts"
+startCommand = "cd server && bun --preload ./src/env.ts src/index.ts"
 healthcheckPath = "/healthz"
 healthcheckTimeout = 30
 restartPolicyType = "ON_FAILURE"
