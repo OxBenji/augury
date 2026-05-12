@@ -7,7 +7,7 @@ import { runPipelineOpenRouterPhase2 } from "../../src/coordinators/parallel-fan
 import { enrichEvent } from "./enrich.js";
 import { broadcast } from "./broadcast.js";
 import { persistReading } from "./storage.js";
-import type { AuguryReading } from "./types.js";
+import type { MurmurReading } from "./types.js";
 
 // ── State ──────────────────────────────────────────────────────────
 
@@ -85,7 +85,7 @@ export async function runPipelineOnEvent(event: unknown): Promise<void> {
     dailyCost += cost;
     readingCount++;
 
-    const reading: AuguryReading = {
+    const reading: MurmurReading = {
       id: `reading_${Date.now()}_${readingCount}`,
       timestamp: Date.now(),
       candidate: {

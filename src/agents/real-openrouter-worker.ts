@@ -12,7 +12,7 @@ const client = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
   defaultHeaders: {
     "HTTP-Referer": "https://github.com/OxBenji/augury",
-    "X-Title": "Augury",
+    "X-Title": "Murmur",
   },
 });
 

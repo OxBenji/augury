@@ -56,7 +56,7 @@ const server = Bun.serve({
       addClient(ws);
       ws.send(JSON.stringify({
         type: "status",
-        payload: { message: "connected to augury observatory" },
+        payload: { message: "connected to murmur observatory" },
         timestamp: Date.now(),
       }));
     },
@@ -72,7 +72,7 @@ const server = Bun.serve({
 // Start heartbeat
 startHeartbeat();
 
-console.log(`augury server listening on :${PORT}`);
+console.log(`murmur server listening on :${PORT}`);
 console.log(`  healthz:  http://localhost:${PORT}/healthz`);
 console.log(`  webhook:  http://localhost:${PORT}/webhook`);
 console.log(`  costs:    http://localhost:${PORT}/costs`);

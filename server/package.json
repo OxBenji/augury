@@ -1,5 +1,5 @@
 {
-  "name": "augury-server",
+  "name": "murmur-server",
   "type": "module",
   "scripts": {
     "dev": "bun --preload ./src/env.ts --watch src/index.ts",

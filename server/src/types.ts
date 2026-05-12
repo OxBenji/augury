@@ -7,7 +7,7 @@ export interface HeliusWebhookEvent {
   raw?: unknown;
 }
 
-export interface AuguryReading {
+export interface MurmurReading {
   id: string;
   timestamp: number;
   candidate: {

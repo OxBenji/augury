@@ -16,7 +16,7 @@ async function heliusRpc(method: string, params: unknown): Promise<unknown> {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       jsonrpc: "2.0",
-      id: "augury",
+      id: "murmur",
       method,
       params,
     }),

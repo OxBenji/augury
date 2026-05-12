@@ -1,28 +1,28 @@
 import { appendFileSync, readFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
-import type { AuguryReading } from "./types.js";
+import type { MurmurReading } from "./types.js";
 
 const LOG_DIR = join(import.meta.dir, "../../server/logs");
 const LOG_FILE = join(LOG_DIR, "readings.jsonl");
 
-export function persistReading(reading: AuguryReading): void {
+export function persistReading(reading: MurmurReading): void {
   if (!existsSync(LOG_DIR)) mkdirSync(LOG_DIR, { recursive: true });
   appendFileSync(LOG_FILE, JSON.stringify(reading) + "\n");
 }
 
-export function loadRecentReadings(limit: number = 20): AuguryReading[] {
+export function loadRecentReadings(limit: number = 20): MurmurReading[] {
   if (!existsSync(LOG_FILE)) return [];
 
   try {
     const content = readFileSync(LOG_FILE, "utf8");
     const lines = content.trim().split("\n").filter(Boolean);
-    const readings: AuguryReading[] = [];
+    const readings: MurmurReading[] = [];
 
     // Take last N lines
     const start = Math.max(0, lines.length - limit);
     for (let i = start; i < lines.length; i++) {
       try {
-        readings.push(JSON.parse(lines[i]) as AuguryReading);
+        readings.push(JSON.parse(lines[i]) as MurmurReading);
       } catch {
         // Skip malformed lines
       }

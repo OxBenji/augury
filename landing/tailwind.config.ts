@@ -8,18 +8,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        obsidian: "#0B0B0F",
-        basalt: "#16161D",
-        bone: "#F5F1E8",
-        ash: "#8A8A94",
-        oxblood: "#8B1E1E",
-        patina: "#C9A961",
-        verdant: "#3F7D58",
-        smoke: "#4A4A52",
-        ember: "#D4742C",
+        bg: "#000000",
+        panel: "#1A1A1A",
+        border: "#3A3A3A",
+        text: "#FFFFFF",
+        muted: "#888888",
+        accent: "#FF3B00",
+        // deprecated aliases
+        obsidian: "#000000",
+        basalt: "#1A1A1A",
+        bone: "#FFFFFF",
+        oxblood: "#FF3B00",
+        patina: "#FF3B00",
+        ash: "#888888",
+        smoke: "#3A3A3A",
       },
       fontFamily: {
-        cinzel: ["var(--font-cinzel)", "serif"],
         geist: ["var(--font-geist)", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
       },
